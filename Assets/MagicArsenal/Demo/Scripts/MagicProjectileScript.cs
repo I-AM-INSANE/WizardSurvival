@@ -8,17 +8,18 @@ public class MagicProjectileScript : MonoBehaviour
     public GameObject muzzleParticle;
     public GameObject[] trailParticles;
     [HideInInspector]
-    public Vector3 impactNormal; //Used to rotate impactparticle.
+    public Vector3 impactNormal; //Used to rotate impact particle.
  
     private bool hasCollided = false;
  
     void Start()
     {
-        projectileParticle = Instantiate(projectileParticle, transform.position, transform.rotation) as GameObject;
+        projectileParticle = Instantiate(projectileParticle, transform.position, transform.rotation);
         projectileParticle.transform.parent = transform;
-		if (muzzleParticle){
-        muzzleParticle = Instantiate(muzzleParticle, transform.position, transform.rotation) as GameObject;
-        Destroy(muzzleParticle, 1.5f); // Lifetime of muzzle effect.
+		if (muzzleParticle)
+        {
+            muzzleParticle = Instantiate(muzzleParticle, transform.position, transform.rotation);
+            Destroy(muzzleParticle, 1.5f); // Lifetime of muzzle effect.
 		}
     }
  
@@ -28,7 +29,7 @@ public class MagicProjectileScript : MonoBehaviour
         {
             hasCollided = true;
             //transform.DetachChildren();
-            impactParticle = Instantiate(impactParticle, transform.position, Quaternion.FromToRotation(Vector3.up, impactNormal)) as GameObject;
+            impactParticle = Instantiate(impactParticle, transform.position, Quaternion.FromToRotation(Vector3.up, impactNormal));
             //Debug.DrawRay(hit.contacts[0].point, hit.contacts[0].normal * 1, Color.yellow);
  
             if (hit.gameObject.tag == "Destructible") // Projectile will destroy objects tagged as Destructible
