@@ -1,35 +1,53 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
-    #region Fields
+    #region
 
-    [SerializeField] private LayerMask objToHit;
-    private RaycastHit hit;
+    [SerializeField] private GameObject projectileForSpawn;
+    [SerializeField] public Transform spawnPosition;
+    [SerializeField] private float projectileSpeed = 1000f;
+    [SerializeField] private float reloadTime;
+
+    //private RaycastHit hit;
+    private Vector3 pointToShoot;
+    private PlayerAim playerAim;
+    private bool isReloading = false;
+
 
     #endregion
 
-    #region Methods
+    #region
 
-    private void Awake()
+    private void Start()
     {
+        playerAim = FindObjectOfType<PlayerAim>();
     }
 
-    private void Update()
+    void Update()
     {
-        Debug.DrawRay(Camera.main.transform.position, Camera.main.transform.forward * 2f, Color.yellow);
-
-        DetectInteractableObject();
+        if (!isReloading && Input.GetAxis("Fire1") > 0)
+            Shoot();
     }
 
-    private void DetectInteractableObject()
+    private void Shoot()
     {
-        if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, 2.5f))
-        {
+        GameObject projectile = Instantiate(projectileForSpawn, spawnPosition.position, Quaternion.identity);
+        pointToShoot = playerAim.GetPointToShoot();     // MAYBE I NEED GET "HIT", NOT POINT
+        projectile.transform.LookAt(pointToShoot);
+        projectile.GetComponent<Rigidbody>().AddForce(projectile.transform.forward * projectileSpeed);
+        //projectile.GetComponent<MagicProjectileScript>().impactNormal = hit.normal;
+        StartCoroutine(Reload());
+    }
 
-        }
+    private IEnumerator Reload()
+    {
+        isReloading = true;
+        yield return new WaitForSeconds(reloadTime);
+        isReloading = false;
     }
 
     #endregion

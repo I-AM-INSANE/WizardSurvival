@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
  
-public class MagicProjectileScript : MonoBehaviour
+public class MagicProjectileScript : MonoBehaviour  // 3 sec life
 {
     public GameObject impactParticle;
     public GameObject projectileParticle;
