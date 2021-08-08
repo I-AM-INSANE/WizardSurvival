@@ -5,50 +5,53 @@ using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
-    #region
+    #region Fields
 
     [SerializeField] private GameObject projectileForSpawn;
-    [SerializeField] public Transform spawnPosition;
+    [SerializeField] private Transform spawnPosition;
     [SerializeField] private float projectileSpeed = 1000f;
     [SerializeField] private float reloadTime;
 
-    //private RaycastHit hit;
     private Vector3 pointToShoot;
     private PlayerAim playerAim;
+    private float inputFire1;
     private bool isReloading = false;
-
 
     #endregion
 
-    #region
+    #region Methods
 
     private void Start()
     {
         playerAim = FindObjectOfType<PlayerAim>();
     }
 
-    void Update()
+    private void Update()
     {
-        if (!isReloading && Input.GetAxis("Fire1") > 0)
+        inputFire1 = Input.GetAxis("Fire1");
+    }
+
+    private void FixedUpdate()
+    {
+        if (!isReloading && inputFire1 > 0)
             Shoot();
     }
 
     private void Shoot()
     {
         GameObject projectile = Instantiate(projectileForSpawn, spawnPosition.position, Quaternion.identity);
-        pointToShoot = playerAim.GetPointToShoot();     // MAYBE I NEED GET "HIT", NOT POINT
+        pointToShoot = playerAim.GetPointToShoot();
         projectile.transform.LookAt(pointToShoot);
-        projectile.GetComponent<Rigidbody>().AddForce(projectile.transform.forward * projectileSpeed);
-        //projectile.GetComponent<MagicProjectileScript>().impactNormal = hit.normal;
-        StartCoroutine(Reload());
+        projectile.GetComponent<Rigidbody>().AddForce(projectile.transform.forward * projectileSpeed, ForceMode.Acceleration);
+        StartCoroutine(ReloadRoutine());
     }
 
-    private IEnumerator Reload()
+    private IEnumerator ReloadRoutine()
     {
         isReloading = true;
         yield return new WaitForSeconds(reloadTime);
         isReloading = false;
     }
 
-    #endregion
+    #endregion Methods
 }
