@@ -7,6 +7,7 @@ public class MagicProjectileScript : MonoBehaviour
     [SerializeField] private GameObject impactParticle;
     [SerializeField] private GameObject projectileParticle;
     [SerializeField] private GameObject muzzleParticle;
+    [SerializeField] private int damage = 50;
     [SerializeField] private float magicProjectileLifetime = 1.7f;
     [SerializeField] private float impactParticleLifetime = 2f;
     [SerializeField] private float muzzleParticleLifetime = 1.5f;
@@ -29,9 +30,18 @@ public class MagicProjectileScript : MonoBehaviour
         {
             hasCollided = true;
             impactParticle = Instantiate(impactParticle, transform.position, Quaternion.identity);
+            TryApplyDamage(collision);
 
             Destroy(impactParticle, impactParticleLifetime);
             Destroy(gameObject);			
+        }
+    }
+
+    private void TryApplyDamage(Collision collision)
+    {
+        if (collision.gameObject.TryGetComponent(out IDamageable idamageable))
+        {
+            idamageable.TakeDamage(damage);
         }
     }
 

@@ -86,6 +86,7 @@ MonoBehaviour:
   impactParticle: {fileID: 100014, guid: 8b45d738f1421854289beca76ec62ae4, type: 3}
   projectileParticle: {fileID: 100008, guid: d452c87524dea094eb2d3e18552f06a8, type: 3}
   muzzleParticle: {fileID: 0}
+  damage: 50
   magicProjectileLifetime: 2.2
   impactParticleLifetime: 2
   muzzleParticleLifetime: 1.5

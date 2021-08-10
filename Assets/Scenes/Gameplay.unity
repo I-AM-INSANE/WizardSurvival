@@ -398,7 +398,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3080270811d64d42bf7cd1f7e1325e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectileForSpawn: {fileID: 100000, guid: 85189cce24e80d841a5e5e7944bdd238, type: 3}
+  projectileForSpawn: {fileID: 100000, guid: a9c95969dd4d043448c3c7aa396c1eaa, type: 3}
   spawnPosition: {fileID: 15517537}
   projectileSpeed: 500
   reloadTime: 0.5
@@ -809,6 +809,75 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1311489931
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1595695846939507206, guid: 55f8e8acf2358ba439f08e2d4481c4f3,
+        type: 3}
+      propertyPath: m_Name
+      value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 1595695846939507207, guid: 55f8e8acf2358ba439f08e2d4481c4f3,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1595695846939507207, guid: 55f8e8acf2358ba439f08e2d4481c4f3,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 1595695846939507207, guid: 55f8e8acf2358ba439f08e2d4481c4f3,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1595695846939507207, guid: 55f8e8acf2358ba439f08e2d4481c4f3,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 13.89
+      objectReference: {fileID: 0}
+    - target: {fileID: 1595695846939507207, guid: 55f8e8acf2358ba439f08e2d4481c4f3,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1595695846939507207, guid: 55f8e8acf2358ba439f08e2d4481c4f3,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1595695846939507207, guid: 55f8e8acf2358ba439f08e2d4481c4f3,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1595695846939507207, guid: 55f8e8acf2358ba439f08e2d4481c4f3,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1595695846939507207, guid: 55f8e8acf2358ba439f08e2d4481c4f3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1595695846939507207, guid: 55f8e8acf2358ba439f08e2d4481c4f3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1595695846939507207, guid: 55f8e8acf2358ba439f08e2d4481c4f3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 55f8e8acf2358ba439f08e2d4481c4f3, type: 3}
 --- !u!1 &1687258581
 GameObject:
   m_ObjectHideFlags: 0
@@ -1037,6 +1106,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: EnemySpawnPoint (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 96146467474043425, guid: c778ec0081d55894290fec388d5f70c2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1717714003348942320, guid: c778ec0081d55894290fec388d5f70c2,
         type: 3}
@@ -1303,6 +1377,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: EnemySpawnPoint
+      objectReference: {fileID: 0}
+    - target: {fileID: 96146467474043425, guid: c778ec0081d55894290fec388d5f70c2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1717714003348942320, guid: c778ec0081d55894290fec388d5f70c2,
         type: 3}
