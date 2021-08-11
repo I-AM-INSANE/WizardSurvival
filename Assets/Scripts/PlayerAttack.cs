@@ -32,10 +32,10 @@ public class PlayerAttack : MonoBehaviour
     private void FixedUpdate()
     {
         if (!isReloading && inputFire1 > 0)
-            Shoot();
+            Attack();
     }
 
-    private void Shoot()
+    private void Attack()
     {
         GameObject projectile = Instantiate(projectileForSpawn, spawnPosition.position, Quaternion.identity);
         pointToShoot = playerAim.GetPointToShoot();

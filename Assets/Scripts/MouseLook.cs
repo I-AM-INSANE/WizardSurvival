@@ -16,7 +16,7 @@ public class MouseLook : MonoBehaviour
     private void Awake()
     {
         Cursor.lockState = CursorLockMode.Locked;
-        player = FindObjectOfType<PlayerMovement>().transform;
+        player = FindObjectOfType<Player>().transform;
     }
     private void LateUpdate()
     {

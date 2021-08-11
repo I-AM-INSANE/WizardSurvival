@@ -3,11 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour, IDamageable
+public class Player : MonoBehaviour
 {
     #region Fields
 
-    [SerializeField] private int health = 100;
+    [SerializeField] private int health;
 
     #endregion
 
