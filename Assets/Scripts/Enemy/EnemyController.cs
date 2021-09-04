@@ -2,11 +2,9 @@
 using UnityEngine;
 using UnityEngine.AI;
 
-public class EnemyController : MonoBehaviour, IDamageable
+public class EnemyController : MonoBehaviour
 {
     #region Fields
-
-    [SerializeField] private EnemyStateManager stateManager;
 
     private EnemyStats enemyStats;
     private NavMeshAgent agent;
@@ -27,9 +25,6 @@ public class EnemyController : MonoBehaviour, IDamageable
 
     private void Start()
     {
-        stateManager.TransitionToState(stateManager.RunningState);
-        stateManager.RunningState.EnterState();
-
         enemyStats = GetComponent<EnemyStats>();
         agent = GetComponent<NavMeshAgent>();
         player = FindObjectOfType<Player>();

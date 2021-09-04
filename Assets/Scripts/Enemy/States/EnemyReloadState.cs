@@ -3,21 +3,40 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyReloadState : BaseEnemyState
+public class EnemyReloadState : EnemyBaseState
 {
-    public override void EnterState()
+    #region Methods
+
+    public override void EnterState(EnemyController enemy)
     {
-        enemyAnimator.Play("EnemyReload");
-        StartCoroutine(ReloadRoutine());
+
     }
 
-    private IEnumerator ReloadRoutine()
+    public override void Update(EnemyController enemy)
     {
-        yield return new WaitForSeconds(enemyStats.ReloadTime);
 
-        if (enemyController.PlayerInAttackingZone)
-            enemyStateManager.TransitionToState(enemyStateManager.AttackingState);
-        else
-            enemyStateManager.TransitionToState(enemyStateManager.RunningState);
     }
+
+    public override void OnCollisionEnter(EnemyController enemy)
+    {
+
+    }
+
+    //public override void EnterState()
+    //{
+    //    enemyAnimator.Play("EnemyReload");
+    //    StartCoroutine(ReloadRoutine());
+    //}
+
+    //private IEnumerator ReloadRoutine()
+    //{
+    //    yield return new WaitForSeconds(enemyStats.ReloadTime);
+
+    //    if (enemyController.PlayerInAttackingZone)
+    //        enemyStateManager.TransitionToState(enemyStateManager.AttackingState);
+    //    else
+    //        enemyStateManager.TransitionToState(enemyStateManager.RunningState);
+    //}
+
+    #endregion
 }
