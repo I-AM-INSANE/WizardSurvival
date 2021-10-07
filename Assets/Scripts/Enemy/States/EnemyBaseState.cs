@@ -6,11 +6,9 @@ public abstract class EnemyBaseState
 {
     #region Methods
 
-    public abstract void EnterState(EnemyController enemy);
+    public abstract void EnterState();
 
-    public abstract void Update(EnemyController enemy);
-
-    public abstract void OnCollisionEnter(EnemyController enemy);
+    public abstract void Update();
 
     #endregion
 }

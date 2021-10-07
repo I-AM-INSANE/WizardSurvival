@@ -7,16 +7,20 @@ public class Player : MonoBehaviour
 {
     #region Fields
 
-    [SerializeField] private int health;
+    private PlayerStats playerStats;
 
     #endregion
 
     #region Methods
 
+    private void Start()
+    {
+        playerStats = GetComponent<PlayerStats>();
+    }
     public void TakeDamage(int damage)
     {
-        health -= damage;
-        if (health <= 0)
+        playerStats.Health -= damage;
+        if (playerStats.Health <= 0)
             Die();
     }
 

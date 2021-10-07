@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
  
-public class MagicProjectileScript : MonoBehaviour
+public class MagicProjectile : MonoBehaviour
 {
     #region Fields
 

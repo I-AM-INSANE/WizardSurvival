@@ -894,6 +894,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1595695846939507211, guid: 55f8e8acf2358ba439f08e2d4481c4f3,
+        type: 3}
+      propertyPath: m_StoppingDistance
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1595695847212248164, guid: 55f8e8acf2358ba439f08e2d4481c4f3,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -919,7 +924,8 @@ PrefabInstance:
       propertyPath: stateManager
       value: 
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -7510953722582935291, guid: 55f8e8acf2358ba439f08e2d4481c4f3, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 55f8e8acf2358ba439f08e2d4481c4f3, type: 3}
 --- !u!1 &1687258581
 GameObject:
