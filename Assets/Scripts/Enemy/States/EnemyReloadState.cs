@@ -8,18 +8,18 @@ public class EnemyReloadState : EnemyBaseState
     #region Fields
 
     private EnemyStateMachine enemyStateMachine;
-    private Animator enemyAnimator;
+    private Animator animator;
     private EnemyStats enemyStats;
     private CheckerPlayerInAttackingZone checkerPlayerInAttackingZone;
     private bool reloadComplete = false;
     private float timeSinceReloadStart = 0f;
 
     #endregion
-    public EnemyReloadState(EnemyStateMachine enemyStateMachine, Animator enemyAnimator, EnemyStats enemyStats, 
+    public EnemyReloadState(EnemyStateMachine enemyStateMachine, Animator animator, EnemyStats enemyStats, 
         CheckerPlayerInAttackingZone checkerPlayerInAttackingZone)
     {
         this.enemyStateMachine = enemyStateMachine;
-        this.enemyAnimator = enemyAnimator;
+        this.animator = animator;
         this.enemyStats = enemyStats;
         this.checkerPlayerInAttackingZone = checkerPlayerInAttackingZone;
     }
@@ -45,7 +45,7 @@ public class EnemyReloadState : EnemyBaseState
 
     private void PlayReloadAnimation()
     {
-        enemyAnimator.Play("EnemyReload");
+        animator.Play("EnemyReload");
     }
 
     private void Reload()
@@ -58,9 +58,9 @@ public class EnemyReloadState : EnemyBaseState
     private void CheckPlayerInAttackingZone()
     {
         if (checkerPlayerInAttackingZone.PlayerInAttackingZone == true)
-            enemyStateMachine.TransitionToState(enemyStateMachine.enemyAttackState);
+            enemyStateMachine.TransitionToState(enemyStateMachine.EnemyAttackState);
         else
-            enemyStateMachine.TransitionToState(enemyStateMachine.enemyMoveState);
+            enemyStateMachine.TransitionToState(enemyStateMachine.EnemyMoveState);
     }
 
     #endregion

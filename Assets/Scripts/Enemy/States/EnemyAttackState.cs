@@ -41,12 +41,13 @@ public class EnemyAttackState : EnemyBaseState
 
     private void PlayAttackAnimation()
     {
+        Debug.Log("ATTACK ANIM ENTER");
         enemyAnimator.Play("EnemyAttack");
     }
 
     private void Reload()
     {
-        enemyStateMachine.TransitionToState(enemyStateMachine.enemyReloadState);
+        enemyStateMachine.TransitionToState(enemyStateMachine.EnemyReloadState);
         enemyStateMachine.OnAnimationEnded -= Reload;
     }
 

@@ -6,9 +6,9 @@ public class EnemyStats : MonoBehaviour
 {
     #region Fields
 
-    [SerializeField] private int health = 100;
-    [SerializeField] private int damage = 20;
-    [SerializeField] private float reloadTime = 0.5f;
+    [SerializeField] private int health;
+    [SerializeField] private int damage;
+    [SerializeField] private float reloadTime;
 
     #endregion
 

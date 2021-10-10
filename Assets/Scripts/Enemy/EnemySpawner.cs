@@ -31,12 +31,6 @@ public class EnemySpawner : MonoBehaviour
 
     private void SpawnEnemy(int enemyNum, int pointNum)
     {
-        if (pointNum == 0)
-        {
-            Debug.LogWarning("No spawn points");
-            return;
-        }
-
         Instantiate(enemies[enemyNum], spawnPoints[pointNum].transform.position, Quaternion.identity);
     }
 

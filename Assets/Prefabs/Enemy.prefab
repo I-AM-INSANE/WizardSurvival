@@ -135,7 +135,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   damage: 20
-  reloadTime: 0.5
+  reloadTime: 3
 --- !u!114 &-5217416962148188214
 MonoBehaviour:
   m_ObjectHideFlags: 0

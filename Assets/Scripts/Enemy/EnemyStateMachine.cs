@@ -19,9 +19,9 @@ public class EnemyStateMachine : MonoBehaviour
 
     #region Properties
 
-    public EnemyMoveState enemyMoveState { get; private set; }
-    public EnemyAttackState enemyAttackState { get; private set; }
-    public EnemyReloadState enemyReloadState { get; private set; }
+    public EnemyMoveState EnemyMoveState { get; private set; }
+    public EnemyAttackState EnemyAttackState { get; private set; }
+    public EnemyReloadState EnemyReloadState { get; private set; }
 
     #endregion
 
@@ -39,13 +39,12 @@ public class EnemyStateMachine : MonoBehaviour
     private void Start()
     {
         InstantiateStates();
-        TransitionToState(enemyMoveState);
+        TransitionToState(EnemyMoveState);
     }
 
     private void Update()
     {
         currentState.Update();
-        Debug.Log(currentState);
     }
 
     public void TransitionToState(EnemyBaseState state)
@@ -56,9 +55,9 @@ public class EnemyStateMachine : MonoBehaviour
 
     private void InstantiateStates()
     {
-        enemyMoveState = new EnemyMoveState(this, enemyAnimator, enemyAgent, checkerPlayerInAttackingZone, player);
-        enemyAttackState = new EnemyAttackState(this, enemyAnimator, enemyStats, player);
-        enemyReloadState = new EnemyReloadState(this, enemyAnimator, enemyStats, checkerPlayerInAttackingZone);
+        EnemyMoveState = new EnemyMoveState(this, enemyAnimator, enemyAgent, checkerPlayerInAttackingZone, player);
+        EnemyAttackState = new EnemyAttackState(this, enemyAnimator, enemyStats, player);
+        EnemyReloadState = new EnemyReloadState(this, enemyAnimator, enemyStats, checkerPlayerInAttackingZone);
     }
 
     private void EndOfAnimation()   // called when attack animation ended

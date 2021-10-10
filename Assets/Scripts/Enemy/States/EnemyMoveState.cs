@@ -49,7 +49,7 @@ public class EnemyMoveState : EnemyBaseState
     private void CheckPlayerInAttackingZone()
     {
         if (checkerPlayerInAttackingZone.PlayerInAttackingZone == true)
-            enemyStateMachine.TransitionToState(enemyStateMachine.enemyAttackState);
+            enemyStateMachine.TransitionToState(enemyStateMachine.EnemyAttackState);
     }
 
     //private void Start()
