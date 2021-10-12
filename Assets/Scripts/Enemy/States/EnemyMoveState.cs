@@ -38,7 +38,7 @@ public class EnemyMoveState : EnemyBaseState
 
     private void PlayMoveAnimation()
     {
-        enemyAnimator.Play("EnemyRun");
+        enemyAnimator.Play("Run");
     }
 
     private void FollowPlayer()
@@ -51,29 +51,6 @@ public class EnemyMoveState : EnemyBaseState
         if (checkerPlayerInAttackingZone.PlayerInAttackingZone == true)
             enemyStateMachine.TransitionToState(enemyStateMachine.EnemyAttackState);
     }
-
-    //private void Start()
-    //{
-    //    enemyAgent = enemyController.GetComponent<NavMeshAgent>();
-    //}
-
-    //private void FixedUpdate()
-    //{
-    //    FollowPlayer();
-    //    if (enemyController.PlayerInAttackingZone)
-    //        enemyStateManager.TransitionToState(enemyStateManager.AttackingState);
-    //}
-
-    //public override void EnterState()
-    //{
-    //    enemyAnimator.Play("EnemyRun");
-    //}
-
-    //private void FollowPlayer()
-    //{
-    //    if (enemyAgent != null)
-    //        enemyAgent.SetDestination(player.transform.position);
-    //}
 
     #endregion
 }

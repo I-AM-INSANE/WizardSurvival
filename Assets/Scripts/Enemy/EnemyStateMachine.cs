@@ -13,6 +13,7 @@ public class EnemyStateMachine : MonoBehaviour
     private Animator enemyAnimator;
     private EnemyStats enemyStats;
     private NavMeshAgent enemyAgent;
+    private Transform enemyTransform;
     private Player player;
 
     #endregion
@@ -33,6 +34,7 @@ public class EnemyStateMachine : MonoBehaviour
         enemyAnimator = GetComponent<Animator>();
         enemyStats = GetComponent<EnemyStats>();
         enemyAgent = GetComponent<NavMeshAgent>();
+        enemyTransform = GetComponent<Transform>();
         player = FindObjectOfType<Player>();
     }
 
@@ -57,7 +59,7 @@ public class EnemyStateMachine : MonoBehaviour
     {
         EnemyMoveState = new EnemyMoveState(this, enemyAnimator, enemyAgent, checkerPlayerInAttackingZone, player);
         EnemyAttackState = new EnemyAttackState(this, enemyAnimator, enemyStats, player);
-        EnemyReloadState = new EnemyReloadState(this, enemyAnimator, enemyStats, checkerPlayerInAttackingZone);
+        EnemyReloadState = new EnemyReloadState(this, enemyAnimator, enemyStats, checkerPlayerInAttackingZone, enemyTransform, player.transform);
     }
 
     private void EndOfAnimation()   // called when attack animation ended

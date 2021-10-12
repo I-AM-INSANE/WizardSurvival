@@ -26,56 +26,29 @@ public class EnemyAttackState : EnemyBaseState
     public override void EnterState()
     {
         enemyStateMachine.OnAnimationEnded += Reload;
-        Attack();
+        PlayAttackAnimation();
     }
 
     public override void Update()
     {
     }
 
-    private void Attack()
-    {
-        PlayAttackAnimation();
-        player.TakeDamage(enemyStats.Damage);
-    }
-
     private void PlayAttackAnimation()
     {
-        Debug.Log("ATTACK ANIM ENTER");
-        enemyAnimator.Play("EnemyAttack");
+        enemyAnimator.Play("Attack");
     }
 
-    private void Reload()
+    private void Reload()   // call when attack animation ended
     {
+        ApplyDamage();
         enemyStateMachine.TransitionToState(enemyStateMachine.EnemyReloadState);
         enemyStateMachine.OnAnimationEnded -= Reload;
     }
 
-    //private void OnEnable()
-    //{
-    //    enemyController.OnAnimationEnded += Reload;
-    //}
-
-    //private void OnDisable()
-    //{
-    //    enemyController.OnAnimationEnded -= Reload;
-    //}
-
-    //public override void EnterState()
-    //{
-    //    Attack();
-    //}
-
-    //private void Attack()
-    //{
-    //    enemyAnimator.Play("EnemyAttack");
-    //    player.TakeDamage(enemyStats.Damage);
-    //}
-
-    //private void Reload()   // called when animation ended
-    //{
-    //    enemyStateManager.TransitionToState(enemyStateManager.ReloadState);
-    //}
+    private void ApplyDamage()
+    {
+        player.TakeDamage(enemyStats.Damage);
+    }
 
     #endregion
 }

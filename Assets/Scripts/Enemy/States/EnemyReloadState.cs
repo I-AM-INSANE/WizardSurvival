@@ -11,17 +11,21 @@ public class EnemyReloadState : EnemyBaseState
     private Animator animator;
     private EnemyStats enemyStats;
     private CheckerPlayerInAttackingZone checkerPlayerInAttackingZone;
+    private Transform enemyTransform;
+    private Transform playerTransform;
     private bool reloadComplete = false;
     private float timeSinceReloadStart = 0f;
 
     #endregion
     public EnemyReloadState(EnemyStateMachine enemyStateMachine, Animator animator, EnemyStats enemyStats, 
-        CheckerPlayerInAttackingZone checkerPlayerInAttackingZone)
+        CheckerPlayerInAttackingZone checkerPlayerInAttackingZone, Transform enemyTransform, Transform playerTransform)
     {
         this.enemyStateMachine = enemyStateMachine;
         this.animator = animator;
         this.enemyStats = enemyStats;
         this.checkerPlayerInAttackingZone = checkerPlayerInAttackingZone;
+        this.enemyTransform = enemyTransform;
+        this.playerTransform = playerTransform;
     }
 
     #region Methods
@@ -33,6 +37,8 @@ public class EnemyReloadState : EnemyBaseState
 
     public override void Update()
     {
+        LookAtPlayer();
+
         if (reloadComplete == false)
             Reload();
         else
@@ -43,9 +49,14 @@ public class EnemyReloadState : EnemyBaseState
         }
     }
 
+    private void LookAtPlayer()
+    {
+        enemyTransform.LookAt(playerTransform);
+    }
+
     private void PlayReloadAnimation()
     {
-        animator.Play("EnemyReload");
+        animator.Play("Idle");
     }
 
     private void Reload()
