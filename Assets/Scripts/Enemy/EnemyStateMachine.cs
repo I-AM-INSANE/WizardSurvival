@@ -12,7 +12,6 @@ public class EnemyStateMachine : MonoBehaviour
     private CheckerPlayerInAttackingZone checkerPlayerInAttackingZone;
     private Animator enemyAnimator;
     private EnemyStats enemyStats;
-    private NavMeshAgent enemyAgent;
     private Transform enemyTransform;
     private Player player;
 
@@ -33,7 +32,6 @@ public class EnemyStateMachine : MonoBehaviour
         checkerPlayerInAttackingZone = GetComponent<CheckerPlayerInAttackingZone>();
         enemyAnimator = GetComponent<Animator>();
         enemyStats = GetComponent<EnemyStats>();
-        enemyAgent = GetComponent<NavMeshAgent>();
         enemyTransform = GetComponent<Transform>();
         player = FindObjectOfType<Player>();
     }
@@ -57,7 +55,7 @@ public class EnemyStateMachine : MonoBehaviour
 
     private void InstantiateStates()
     {
-        EnemyMoveState = new EnemyMoveState(this, enemyAnimator, enemyAgent, checkerPlayerInAttackingZone, player);
+        EnemyMoveState = new EnemyMoveState(this, enemyAnimator, checkerPlayerInAttackingZone);
         EnemyAttackState = new EnemyAttackState(this, enemyAnimator, enemyStats, player);
         EnemyReloadState = new EnemyReloadState(this, enemyAnimator, enemyStats, checkerPlayerInAttackingZone, enemyTransform, player.transform);
     }

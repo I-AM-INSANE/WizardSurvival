@@ -4,8 +4,7 @@ public class PlayerMovement : MonoBehaviour
 {
     #region Fields
 
-    [SerializeField] private float moveSpeed = 5f;
-
+    private PlayerStats playerStats;
     private CharacterController controller;
 
     #endregion
@@ -14,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Awake()
     {
+        playerStats = GetComponent<PlayerStats>();
         controller = GetComponent<CharacterController>();
     }
 
@@ -31,7 +31,7 @@ public class PlayerMovement : MonoBehaviour
         if (Mathf.Sqrt(Mathf.Pow(moveDirection.x, 2) + Mathf.Pow(moveDirection.z, 2)) > 1)  // fix increase speed when walking diagonally
             moveDirection.Normalize();
 
-        controller.Move(moveDirection * moveSpeed * Time.deltaTime);
+        controller.Move(moveDirection * playerStats.MoveSpeed * Time.deltaTime);
     }
 
     #endregion

@@ -6,6 +6,7 @@ public class CheckerPlayerInAttackingZone : MonoBehaviour
     #region Fields
 
     private Player player;
+    private EnemyStats enemyStats;
     private NavMeshAgent agent;
     private bool playerInAttackingZone = false;
 
@@ -22,6 +23,7 @@ public class CheckerPlayerInAttackingZone : MonoBehaviour
     private void Start()
     {
         player = FindObjectOfType<Player>();
+        enemyStats = GetComponent<EnemyStats>();
         agent = GetComponent<NavMeshAgent>();
     }
 
@@ -36,7 +38,7 @@ public class CheckerPlayerInAttackingZone : MonoBehaviour
             return false;
 
         float distanceToPlayer = Vector3.Distance(player.transform.position, transform.position);
-        return distanceToPlayer <= agent.stoppingDistance;
+        return distanceToPlayer <= enemyStats.AttackRange;
     }
 
     #endregion

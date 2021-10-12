@@ -7,6 +7,7 @@ public class PlayerStats : MonoBehaviour
     #region Fields
 
     [SerializeField] private int health;
+    [SerializeField] private float moveSpeed;
 
     #endregion
 
@@ -16,6 +17,12 @@ public class PlayerStats : MonoBehaviour
     {
         get { return health; }
         set { health = value; }
+    }
+
+    public float MoveSpeed
+    {
+        get { return moveSpeed; }
+        set { moveSpeed = value; }
     }
 
     #endregion

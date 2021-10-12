@@ -32,33 +32,28 @@ public class EnemyReloadState : EnemyBaseState
 
     public override void EnterState()
     {
-        PlayReloadAnimation();
     }
 
     public override void Update()
     {
-        LookAtPlayer();
+        PlayAnimation();
 
         if (reloadComplete == false)
             Reload();
         else
         {
-            CheckPlayerInAttackingZone();
+            GoToAnotherState();
             timeSinceReloadStart = 0f;
             reloadComplete = false;
         }
     }
 
-    private void LookAtPlayer()
+    private void PlayAnimation()
     {
-        Vector3 direcion = playerTransform.position - enemyTransform.position;
-        Quaternion rotation = Quaternion.LookRotation(direcion);
-        enemyTransform.rotation = Quaternion.Lerp(enemyTransform.rotation, rotation, enemyStats.RotationSpeed * Time.deltaTime);
-    }
-
-    private void PlayReloadAnimation()
-    {
-        animator.Play("Idle");
+        if (checkerPlayerInAttackingZone.PlayerInAttackingZone == true)
+            animator.Play("Idle");
+        else
+            animator.Play("Run");
     }
 
     private void Reload()
@@ -68,7 +63,7 @@ public class EnemyReloadState : EnemyBaseState
             reloadComplete = true;
     }
 
-    private void CheckPlayerInAttackingZone()
+    private void GoToAnotherState()
     {
         if (checkerPlayerInAttackingZone.PlayerInAttackingZone == true)
             enemyStateMachine.TransitionToState(enemyStateMachine.EnemyAttackState);
