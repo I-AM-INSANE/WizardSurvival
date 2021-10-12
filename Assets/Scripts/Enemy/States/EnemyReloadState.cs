@@ -51,7 +51,9 @@ public class EnemyReloadState : EnemyBaseState
 
     private void LookAtPlayer()
     {
-        enemyTransform.LookAt(playerTransform);
+        Vector3 direcion = playerTransform.position - enemyTransform.position;
+        Quaternion rotation = Quaternion.LookRotation(direcion);
+        enemyTransform.rotation = Quaternion.Lerp(enemyTransform.rotation, rotation, enemyStats.RotationSpeed * Time.deltaTime);
     }
 
     private void PlayReloadAnimation()

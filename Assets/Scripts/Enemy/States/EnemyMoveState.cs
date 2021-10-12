@@ -13,6 +13,7 @@ public class EnemyMoveState : EnemyBaseState
     private Player player;
 
     #endregion
+
     public EnemyMoveState(EnemyStateMachine enemyStateMachine, Animator enemyAnimator, NavMeshAgent enemyAgent, 
         CheckerPlayerInAttackingZone checkerPlayerInAttackingZone, Player player)
     {

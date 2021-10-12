@@ -414,7 +414,7 @@ NavMeshObstacle:
   m_Enabled: 1
   serializedVersion: 3
   m_Shape: 0
-  m_Extents: {x: 0.6, y: 1.8, z: 0.6}
+  m_Extents: {x: 0.7, y: 1.8, z: 0.7}
   m_MoveThreshold: 0.1
   m_Carve: 0
   m_CarveOnlyStationary: 1
@@ -1329,6 +1329,11 @@ PrefabInstance:
         type: 3}
       propertyPath: reloadTime
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7293031851518617826, guid: 717bceea621098046a9fe77c50362d8f,
+        type: 3}
+      propertyPath: rotationSpeed
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8291972710412855828, guid: 717bceea621098046a9fe77c50362d8f,
         type: 3}
