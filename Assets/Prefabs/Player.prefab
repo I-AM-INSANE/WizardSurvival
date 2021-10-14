@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 1659731040890587855}
   - component: {fileID: 1659731040890587843}
   - component: {fileID: 1659731040890587854}
-  - component: {fileID: 1659731040890587842}
   m_Layer: 8
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -130,21 +129,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mouseSensitivity: 50
---- !u!114 &1659731040890587842
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1659731040890587852}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba9d4021a586e9b49bdaafef80daa963, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objToHit:
-    serializedVersion: 2
-    m_Bits: 19
 --- !u!1 &1659731041846690030
 GameObject:
   m_ObjectHideFlags: 0
@@ -239,6 +223,7 @@ GameObject:
   - component: {fileID: 1659731041873979639}
   - component: {fileID: 1659731041873979624}
   - component: {fileID: 1659731041873979629}
+  - component: {fileID: 695831527}
   m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
@@ -305,7 +290,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c10cbe365be42d44998892e33a510eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
 --- !u!114 &1659731041873979624
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -335,6 +319,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  moveSpeed: 5
+--- !u!114 &695831527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1659731041873979636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba9d4021a586e9b49bdaafef80daa963, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1659731042104434511
 GameObject:
   m_ObjectHideFlags: 0

@@ -132,6 +132,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EvilMagePBR
       objectReference: {fileID: 0}
+    - target: {fileID: 1201003157251696, guid: f397a44c833ad65409eba4bce5ea62ed, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1240966738318334, guid: f397a44c833ad65409eba4bce5ea62ed, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -1711,16 +1715,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1659731041873979629, guid: eadebbeb5133c5b47ac80acf75ce39b0,
-        type: 3}
-      propertyPath: health
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 1659731041873979629, guid: eadebbeb5133c5b47ac80acf75ce39b0,
-        type: 3}
-      propertyPath: moveSpeed
-      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1659731041873979636, guid: eadebbeb5133c5b47ac80acf75ce39b0,
         type: 3}
