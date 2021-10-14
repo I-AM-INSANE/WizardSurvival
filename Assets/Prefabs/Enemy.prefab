@@ -197,7 +197,7 @@ MonoBehaviour:
   health: 100
   damage: 20
   attackRange: 4
-  reloadTime: 2
+  reloadTime: 1
 --- !u!114 &2666970300414377847
 MonoBehaviour:
   m_ObjectHideFlags: 0
