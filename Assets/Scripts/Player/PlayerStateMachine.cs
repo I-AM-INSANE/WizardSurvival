@@ -9,7 +9,6 @@ public class PlayerStateMachine : MonoBehaviour
     public event Action OnAnimationEnded;
 
     private Animator playerAnimator;
-    private PlayerAttack playerAttack;
     private PlayerStats playerStats;
 
     #endregion
@@ -28,7 +27,6 @@ public class PlayerStateMachine : MonoBehaviour
     private void Awake()
     {
         playerAnimator = GetComponent<Animator>();
-        playerAttack = GetComponent<PlayerAttack>();
         playerStats = GetComponent<PlayerStats>();
     }
 
@@ -51,10 +49,10 @@ public class PlayerStateMachine : MonoBehaviour
 
     private void InstantiateStates()
     {
-        PlayerIdleState = new PlayerIdleState(this, playerAnimator);
-        PlayerMoveState = new PlayerMoveState(this);
-        PlayerAttackState = new PlayerAttackState(this, playerAttack);
-        PlayerReloadState = new PlayerReloadState(this);
+        PlayerIdleState = new PlayerIdleState(playerAnimator);
+        PlayerMoveState = new PlayerMoveState();
+        PlayerAttackState = new PlayerAttackState();
+        PlayerReloadState = new PlayerReloadState();
     }
 
     private void EndOfAnimation()   // called when attack animation ended

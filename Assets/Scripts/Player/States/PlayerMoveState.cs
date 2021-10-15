@@ -6,13 +6,14 @@ public class PlayerMoveState : PlayerBaseState
 {
     #region Fields
 
-    PlayerStateMachine playerStateMachine;
+
+
 
     #endregion
 
-    public PlayerMoveState(PlayerStateMachine playerStateMachine)
+    public PlayerMoveState()
     {
-        this.playerStateMachine = playerStateMachine;
+
     }
 
     #region Methods

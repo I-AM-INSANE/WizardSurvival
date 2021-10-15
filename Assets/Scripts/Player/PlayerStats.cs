@@ -8,7 +8,6 @@ public class PlayerStats : MonoBehaviour
 
     [SerializeField] private int health;
     [SerializeField] private float moveSpeed;
-    [SerializeField] private int magicProjectileSpeed;
 
     #endregion
 
@@ -24,12 +23,6 @@ public class PlayerStats : MonoBehaviour
     {
         get { return moveSpeed; }
         set { moveSpeed = value; }
-    }
-
-    public int MagicProjectileSpeed
-    {
-        get { return magicProjectileSpeed; }
-        set { magicProjectileSpeed = value; }
     }
 
     #endregion

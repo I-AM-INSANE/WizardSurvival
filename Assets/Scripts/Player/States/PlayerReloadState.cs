@@ -6,13 +6,14 @@ public class PlayerReloadState : PlayerBaseState
 {
     #region Fields
 
-    PlayerStateMachine playerStateMachine;
+
+
 
     #endregion
 
-    public PlayerReloadState(PlayerStateMachine playerStateMachine)
+    public PlayerReloadState()
     {
-        this.playerStateMachine = playerStateMachine;
+
     }
 
     #region Methods
