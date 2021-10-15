@@ -11,10 +11,11 @@ GameObject:
   - component: {fileID: 293619875069273562}
   - component: {fileID: 293619875069273541}
   - component: {fileID: 3101017243319904974}
+  - component: {fileID: 4052738420517810569}
+  - component: {fileID: 293619875069273566}
   - component: {fileID: 293619875069273561}
   - component: {fileID: 293619875069273540}
   - component: {fileID: 293619875069273563}
-  - component: {fileID: 293619875069273566}
   - component: {fileID: 1376880127946802900}
   m_Layer: 8
   m_Name: Player
@@ -76,6 +77,33 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &4052738420517810569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 293619875069273543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e41f6e6a49f91b24d9a5e8387226523f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &293619875069273566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 293619875069273543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 535a5be836e6b2a449dabd5739db0e37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  moveSpeed: 5
+  magicProjectileSpeed: 500
 --- !u!114 &293619875069273561
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -114,22 +142,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectileForSpawn: {fileID: 100000, guid: a9c95969dd4d043448c3c7aa396c1eaa, type: 3}
   spawnPosition: {fileID: 293619875789505867}
-  projectileSpeed: 500
-  reloadTime: 0.5
---- !u!114 &293619875069273566
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 293619875069273543}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 535a5be836e6b2a449dabd5739db0e37, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 100
-  moveSpeed: 5
 --- !u!114 &1376880127946802900
 MonoBehaviour:
   m_ObjectHideFlags: 0
