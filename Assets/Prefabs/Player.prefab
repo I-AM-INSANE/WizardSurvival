@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
 <<<<<<< HEAD
-<<<<<<< HEAD
   - component: {fileID: 293619875069273562}
   - component: {fileID: 293619875069273541}
   - component: {fileID: 3101017243319904974}
@@ -20,8 +19,6 @@ GameObject:
   - component: {fileID: 293619875069273563}
   - component: {fileID: 1376880127946802900}
 =======
-=======
->>>>>>> parent of 01a1041 (Save before statemachine Player)
   - component: {fileID: 1659731040890587840}
   - component: {fileID: 1659731040890587841}
   - component: {fileID: 1659731040890587855}
@@ -238,9 +235,6 @@ GameObject:
   - component: {fileID: 1659731041873979624}
   - component: {fileID: 1659731041873979629}
   - component: {fileID: 695831527}
-<<<<<<< HEAD
->>>>>>> parent of 01a1041 (Save before statemachine Player)
-=======
 >>>>>>> parent of 01a1041 (Save before statemachine Player)
   m_Layer: 8
   m_Name: Player
@@ -284,7 +278,6 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
 <<<<<<< HEAD
-<<<<<<< HEAD
   m_Center: {x: 0, y: -0.29, z: 0.3}
 --- !u!95 &3101017243319904974
 Animator:
@@ -310,10 +303,6 @@ Animator:
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1659731041873979626
 >>>>>>> parent of 01a1041 (Save before statemachine Player)
-=======
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1659731041873979626
->>>>>>> parent of 01a1041 (Save before statemachine Player)
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -326,11 +315,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
 <<<<<<< HEAD
-<<<<<<< HEAD
 --- !u!114 &293619875069273566
-=======
---- !u!114 &1659731041873979639
->>>>>>> parent of 01a1041 (Save before statemachine Player)
 =======
 --- !u!114 &1659731041873979639
 >>>>>>> parent of 01a1041 (Save before statemachine Player)
@@ -346,14 +331,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
 <<<<<<< HEAD
-<<<<<<< HEAD
   health: 100
   moveSpeed: 5
   magicProjectileSpeed: 500
 --- !u!114 &293619875069273561
-=======
---- !u!114 &1659731041873979624
->>>>>>> parent of 01a1041 (Save before statemachine Player)
 =======
 --- !u!114 &1659731041873979624
 >>>>>>> parent of 01a1041 (Save before statemachine Player)
@@ -376,7 +357,6 @@ MonoBehaviour:
   projectileSpeed: 500
   reloadTime: 0.5
 --- !u!114 &1659731041873979629
-<<<<<<< HEAD
 >>>>>>> parent of 01a1041 (Save before statemachine Player)
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -391,14 +371,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
 <<<<<<< HEAD
 --- !u!114 &293619875069273563
-=======
->>>>>>> parent of 01a1041 (Save before statemachine Player)
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1659731041873979636}
+  m_GameObject: {fileID: 293619875069273543}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b3080270811d64d42bf7cd1f7e1325e0, type: 3}
@@ -411,9 +389,6 @@ MonoBehaviour:
   health: 100
   moveSpeed: 5
 --- !u!114 &695831527
-<<<<<<< HEAD
->>>>>>> parent of 01a1041 (Save before statemachine Player)
-=======
 >>>>>>> parent of 01a1041 (Save before statemachine Player)
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1717,21 +1717,15 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
 <<<<<<< HEAD
-<<<<<<< HEAD
     - target: {fileID: 293619875069273566, guid: eadebbeb5133c5b47ac80acf75ce39b0,
         type: 3}
       propertyPath: magicProjectileSpeed
       value: 500
 =======
-=======
->>>>>>> parent of 01a1041 (Save before statemachine Player)
     - target: {fileID: 1659731041873979636, guid: eadebbeb5133c5b47ac80acf75ce39b0,
         type: 3}
       propertyPath: m_Name
       value: Player
-<<<<<<< HEAD
->>>>>>> parent of 01a1041 (Save before statemachine Player)
-=======
 >>>>>>> parent of 01a1041 (Save before statemachine Player)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
