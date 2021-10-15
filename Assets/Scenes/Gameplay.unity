@@ -1720,11 +1720,14 @@ PrefabInstance:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     - target: {fileID: 293619875069273566, guid: eadebbeb5133c5b47ac80acf75ce39b0,
         type: 3}
       propertyPath: magicProjectileSpeed
       value: 500
 =======
+=======
+>>>>>>> parent of 01a1041 (Save before statemachine Player)
 =======
 >>>>>>> parent of 01a1041 (Save before statemachine Player)
 =======
@@ -1738,6 +1741,9 @@ PrefabInstance:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 01a1041 (Save before statemachine Player)
+=======
 >>>>>>> parent of 01a1041 (Save before statemachine Player)
 =======
 >>>>>>> parent of 01a1041 (Save before statemachine Player)
