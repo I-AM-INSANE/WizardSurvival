@@ -34,7 +34,5 @@ public class PlayerMovement : MonoBehaviour
         controller.Move(moveDirection * playerStats.MoveSpeed * Time.deltaTime);
     }
 
-
-
     #endregion
 }

@@ -1,4 +1,8 @@
-﻿public abstract class EnemyBaseState
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public abstract class EnemyBaseState
 {
     #region Methods
 
