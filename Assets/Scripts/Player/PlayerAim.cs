@@ -5,7 +5,7 @@ public class PlayerAim : MonoBehaviour
 
     #region Fields
 
-    [SerializeField] private LayerMask objToHit;
+    [SerializeField] private float offsetForRay;    // 7 for "darkMage"
 
     private Camera mainCamera;
     private RaycastHit hit;
@@ -21,13 +21,13 @@ public class PlayerAim : MonoBehaviour
 
     private void Update()
     {
-        Debug.DrawRay(mainCamera.transform.position, mainCamera.transform.forward * 100f, Color.red);
+        Debug.DrawRay(mainCamera.transform.position + mainCamera.transform.forward * offsetForRay, mainCamera.transform.forward * 100f, Color.red);
     }
 
     public Vector3 GetPointToShoot()
     {
 
-        if (Physics.Raycast(mainCamera.transform.position, mainCamera.transform.forward, out hit, 100f, objToHit))
+        if (Physics.Raycast(mainCamera.transform.position + mainCamera.transform.forward * offsetForRay, mainCamera.transform.forward, out hit, 100f))
             return hit.point;
 
         return transform.position + transform.forward * 100f;   // if no object to shoot

@@ -9931,6 +9931,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1376880127946802900, guid: eadebbeb5133c5b47ac80acf75ce39b0,
         type: 3}
+      propertyPath: offsetForRay
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1376880127946802900, guid: eadebbeb5133c5b47ac80acf75ce39b0,
+        type: 3}
       propertyPath: objToHit.m_Bits
       value: 1555
       objectReference: {fileID: 0}
