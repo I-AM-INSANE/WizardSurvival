@@ -24,9 +24,15 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        Gravity();
         UserInput();
         Move();
         PlayMoveAnimation();
+    }
+
+    private void Gravity()
+    {
+        controller.Move(Physics.gravity * Time.deltaTime);
     }
 
     private void UserInput()
