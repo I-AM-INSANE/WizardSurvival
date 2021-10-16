@@ -7,10 +7,8 @@ public class PlayerAttack : MonoBehaviour
 
     [SerializeField] private GameObject projectileForSpawn;
     [SerializeField] private Transform spawnPosition;
-    [SerializeField] private float projectileSpeed = 1000f;
-    [SerializeField] private float reloadTime;
 
-    private Vector3 pointToShoot;
+    private PlayerStats playerStats;
     private PlayerAim playerAim;
     private float inputFire1;
     private bool isReloading = false;
@@ -21,7 +19,8 @@ public class PlayerAttack : MonoBehaviour
 
     private void Start()
     {
-        playerAim = FindObjectOfType<PlayerAim>();
+        playerStats = GetComponent<PlayerStats>();
+        playerAim = GetComponent<PlayerAim>();
     }
 
     private void Update()
@@ -38,16 +37,16 @@ public class PlayerAttack : MonoBehaviour
     private void Attack()
     {
         GameObject projectile = Instantiate(projectileForSpawn, spawnPosition.position, Quaternion.identity);
-        pointToShoot = playerAim.GetPointToShoot();
+        Vector3 pointToShoot = playerAim.GetPointToShoot();
         projectile.transform.LookAt(pointToShoot);
-        projectile.GetComponent<Rigidbody>().AddForce(projectile.transform.forward * projectileSpeed, ForceMode.Acceleration);
+        projectile.GetComponent<Rigidbody>().AddForce(projectile.transform.forward * playerStats.MagicProjectileSpeed, ForceMode.Acceleration);
         StartCoroutine(ReloadRoutine());
     }
 
     private IEnumerator ReloadRoutine()
     {
         isReloading = true;
-        yield return new WaitForSeconds(reloadTime);
+        yield return new WaitForSeconds(playerStats.ReloadTime);
         isReloading = false;
     }
 

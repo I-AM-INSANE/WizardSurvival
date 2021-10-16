@@ -17,8 +17,14 @@ public class PlayerAim : MonoBehaviour
         mainCamera = Camera.main;
     }
 
+    private void Update()
+    {
+        Debug.DrawRay(mainCamera.transform.position, mainCamera.transform.forward * 100f, Color.red);
+    }
+
     public Vector3 GetPointToShoot()
     {
+
         if (Physics.Raycast(mainCamera.transform.position, mainCamera.transform.forward, out hit, 100f))
             return hit.point;
 
