@@ -5,6 +5,8 @@ public class PlayerAim : MonoBehaviour
 
     #region Fields
 
+    [SerializeField] private LayerMask objToHit;
+
     private Camera mainCamera;
     private RaycastHit hit;
 
@@ -25,7 +27,7 @@ public class PlayerAim : MonoBehaviour
     public Vector3 GetPointToShoot()
     {
 
-        if (Physics.Raycast(mainCamera.transform.position, mainCamera.transform.forward, out hit, 100f))
+        if (Physics.Raycast(mainCamera.transform.position, mainCamera.transform.forward, out hit, 100f, objToHit))
             return hit.point;
 
         return transform.position + transform.forward * 100f;   // if no object to shoot
