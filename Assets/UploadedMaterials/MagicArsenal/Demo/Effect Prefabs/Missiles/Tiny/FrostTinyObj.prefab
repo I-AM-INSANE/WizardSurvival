@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 13500000}
   - component: {fileID: 5400000}
   - component: {fileID: 11491332}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: FrostTinyObj
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -86,6 +86,7 @@ MonoBehaviour:
   impactParticle: {fileID: 171178, guid: 4e845b2a2f67c424d95d2f46ec589f9f, type: 3}
   projectileParticle: {fileID: 154534, guid: 5535b349e6ff989468a2e66903f14be3, type: 3}
   muzzleParticle: {fileID: 0}
+  damage: 50
   magicProjectileLifetime: 1.7
   impactParticleLifetime: 2
   muzzleParticleLifetime: 1.5

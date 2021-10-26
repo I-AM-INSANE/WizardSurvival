@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 13500000}
   - component: {fileID: 5400000}
   - component: {fileID: 11482090}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: StormNormalObj
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -86,6 +86,7 @@ MonoBehaviour:
   impactParticle: {fileID: 100008, guid: 890764e2a799d714fa817cc333d17e17, type: 3}
   projectileParticle: {fileID: 100014, guid: fcb5c083659d20643a5041a3ffa7b584, type: 3}
   muzzleParticle: {fileID: 107242, guid: 4f01e09274ab093448d46ac4916288cf, type: 3}
+  damage: 50
   magicProjectileLifetime: 2.7
   impactParticleLifetime: 2
   muzzleParticleLifetime: 1.5

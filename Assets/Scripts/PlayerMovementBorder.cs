@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlayerMovementBorder : MonoBehaviour
 {
@@ -9,7 +7,7 @@ public class PlayerMovementBorder : MonoBehaviour
     private void Start()
     {
         Physics.IgnoreLayerCollision(gameObject.layer, FindObjectOfType<Enemy>().gameObject.layer);
-        Physics.IgnoreLayerCollision(gameObject.layer, 0);
+        Physics.IgnoreLayerCollision(gameObject.layer, 12);
     }
 
     #endregion

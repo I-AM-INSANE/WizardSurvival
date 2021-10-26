@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 13500000}
   - component: {fileID: 5400000}
   - component: {fileID: 11484230}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: ArcaneTinyObj
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -86,6 +86,7 @@ MonoBehaviour:
   impactParticle: {fileID: 199898, guid: 7bbe36e923d120540a9d42d5002a84f5, type: 3}
   projectileParticle: {fileID: 130552, guid: 2c2a183ad8a070b4ca24f54daad8b2da, type: 3}
   muzzleParticle: {fileID: 0}
+  damage: 50
   magicProjectileLifetime: 1.7
   impactParticleLifetime: 2
   muzzleParticleLifetime: 1.5

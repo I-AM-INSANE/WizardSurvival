@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 13500000}
   - component: {fileID: 5400000}
   - component: {fileID: 11400834}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: LifeTinyObj
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -86,6 +86,7 @@ MonoBehaviour:
   impactParticle: {fileID: 187428, guid: a09f02425a8307640b16f6427069403a, type: 3}
   projectileParticle: {fileID: 174430, guid: 021333572c87ea44398e5894bfa89943, type: 3}
   muzzleParticle: {fileID: 0}
+  damage: 50
   magicProjectileLifetime: 1.7
   impactParticleLifetime: 2
   muzzleParticleLifetime: 1.5

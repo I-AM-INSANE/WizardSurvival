@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 13500000}
   - component: {fileID: 5400000}
   - component: {fileID: 11448852}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: LightningTinyObj
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -86,6 +86,7 @@ MonoBehaviour:
   impactParticle: {fileID: 156488, guid: dea1f08dc19ca07458e689ec70311e5d, type: 3}
   projectileParticle: {fileID: 197658, guid: d74ebc75b860ca341a2c8b99d74519de, type: 3}
   muzzleParticle: {fileID: 0}
+  damage: 50
   magicProjectileLifetime: 1.7
   impactParticleLifetime: 2
   muzzleParticleLifetime: 1.5

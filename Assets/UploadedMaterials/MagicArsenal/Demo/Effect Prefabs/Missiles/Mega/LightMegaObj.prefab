@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 13500000}
   - component: {fileID: 5400000}
   - component: {fileID: 11417908}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: LightMegaObj
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -86,6 +86,7 @@ MonoBehaviour:
   impactParticle: {fileID: 122736, guid: 37777342c5e9ebe4183d67d0adc33e94, type: 3}
   projectileParticle: {fileID: 170158, guid: 9ff40156c1e416345aca30fc46136b97, type: 3}
   muzzleParticle: {fileID: 153510, guid: 9feac2264c214534eb9d8275b2c54b1b, type: 3}
+  damage: 50
   magicProjectileLifetime: 3
   impactParticleLifetime: 2
   muzzleParticleLifetime: 1.5
