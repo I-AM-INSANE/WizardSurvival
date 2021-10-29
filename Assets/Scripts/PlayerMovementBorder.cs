@@ -6,8 +6,8 @@ public class PlayerMovementBorder : MonoBehaviour
 
     private void Start()
     {
-        Physics.IgnoreLayerCollision(gameObject.layer, FindObjectOfType<Enemy>().gameObject.layer);
-        Physics.IgnoreLayerCollision(gameObject.layer, 12);
+        Physics.IgnoreLayerCollision(gameObject.layer, LayerMask.NameToLayer("Enemy"));
+        Physics.IgnoreLayerCollision(gameObject.layer, LayerMask.NameToLayer("MagicProjectiles"));
     }
 
     #endregion
