@@ -28,8 +28,15 @@ public class TargetFinder : MonoBehaviour
 
     private void Update()
     {
-        if (target == null)
+        if (target != null)
+        {
+            if (Vector3.Distance(transform.position, target.transform.position) > playerStats.AttackRange)
+                target = null;
+        }
+        else
+        {
             FindTarget();
+        }
     }
 
     private void FindTarget()

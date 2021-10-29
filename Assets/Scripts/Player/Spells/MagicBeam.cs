@@ -15,13 +15,8 @@ public class MagicBeam : MonoBehaviour
     [SerializeField] private GameObject[] beamStartPrefabs;
     [SerializeField] private GameObject[] beamEndPrefabs;
 
-    [Header("Adjustable Variables")]
-    [SerializeField] private float beamEndOffset = 1f; //How far from the raycast hit point the end effect is positioned
-    [SerializeField] private float textureScrollSpeed = 4f; //How fast the texture scrolls along the beam
-    [SerializeField] private float textureLengthScale = 12; //Length of the beam texture
-
     private int currentBeam = 2;
-    private Vector3 targetPosition;
+    private Transform target;
     private GameObject beamStart;
     private GameObject beamEnd;
     private GameObject beam;
@@ -41,7 +36,7 @@ public class MagicBeam : MonoBehaviour
     {
         if (targetFinder.Target != null)
         {
-            targetPosition = targetFinder.Target.transform.position;
+            target = targetFinder.Target.transform;
             if (beamStart == null)
             {
                 InstantianeBeam();
@@ -70,21 +65,16 @@ public class MagicBeam : MonoBehaviour
 
     void ShootBeamInDirection(Vector3 attackDirection)
     {
+        float halfColliderHeight = target.GetComponent<CapsuleCollider>().height / 2;
         line.positionCount = 2;
         line.SetPosition(0, projectileSpawnPoint.position);
-        line.SetPosition(1, targetPosition);
+        line.SetPosition(1, target.position + new Vector3(0, halfColliderHeight, 0));
 
         beamStart.transform.position = projectileSpawnPoint.position;
-        beamEnd.transform.position = targetFinder.Target.transform.position;
-
-        //line.SetPosition(1, targetPosition);
+        beamEnd.transform.position = target.position + new Vector3(0, halfColliderHeight, 0);
 
         beamStart.transform.LookAt(beamEnd.transform.position);
         beamEnd.transform.LookAt(beamStart.transform.position);
-
-        //float distance = Vector3.Distance(projectileSpawnPoint.position, targetPosition);
-        //line.sharedMaterial.mainTextureScale = new Vector2(distance / textureLengthScale, 1);
-        //line.sharedMaterial.mainTextureOffset -= new Vector2(Time.deltaTime * textureScrollSpeed, 0);
     }
 
     private void DestroyBeam()
