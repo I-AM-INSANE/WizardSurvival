@@ -39,7 +39,9 @@ public class PlayerAttack : MonoBehaviour
         GameObject projectile = Instantiate(projectileForSpawn, spawnPosition.position, Quaternion.identity);
         Vector3 pointToShoot = playerAim.GetPointToShoot();
         projectile.transform.LookAt(pointToShoot);
-        projectile.GetComponent<Rigidbody>().AddForce(projectile.transform.forward * playerStats.MagicProjectileSpeed, ForceMode.Acceleration);
+        projectile.GetComponent<Rigidbody>().AddForce(projectile.transform.forward * 
+            projectile.GetComponent<MagicProjectile>().ProjectileSpeed, ForceMode.Acceleration);
+
         StartCoroutine(ReloadRoutine());
     }
 

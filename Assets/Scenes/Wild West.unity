@@ -6014,6 +6014,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 293619875069273566, guid: eadebbeb5133c5b47ac80acf75ce39b0,
+        type: 3}
+      propertyPath: attackRange
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 1376880127946802900, guid: eadebbeb5133c5b47ac80acf75ce39b0,
         type: 3}
       propertyPath: ObjToHit.m_Bits

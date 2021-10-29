@@ -6,10 +6,10 @@ public class PlayerStats : MonoBehaviour
 {
     #region Fields
 
-    [SerializeField] private int health;
-    [SerializeField] private float moveSpeed;
-    [SerializeField] private int magicProjectileSpeed;
-    [SerializeField] private float reloadTime;
+    [SerializeField] private int health = 100;
+    [SerializeField] private float moveSpeed = 5f;
+    [SerializeField] private float attackRange = 10f;
+    [SerializeField] private float reloadTime = 0.7f;
 
     #endregion
 
@@ -27,10 +27,10 @@ public class PlayerStats : MonoBehaviour
         set { moveSpeed = value; }
     }
 
-    public int MagicProjectileSpeed
+    public float AttackRange
     {
-        get { return magicProjectileSpeed; }
-        set { magicProjectileSpeed = value; }
+        get { return attackRange; }
+        set { attackRange = value; }
     }
 
     public float ReloadTime

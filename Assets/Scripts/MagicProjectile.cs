@@ -8,11 +8,18 @@ public class MagicProjectile : MonoBehaviour
     [SerializeField] private GameObject projectileParticle;
     [SerializeField] private GameObject muzzleParticle;
     [SerializeField] private int damage = 50;
-    [SerializeField] private float magicProjectileLifetime = 2.2f;
+    [SerializeField] private int projectileSpeed = 500;
     [SerializeField] private float impactParticleLifetime = 2f;
     [SerializeField] private float muzzleParticleLifetime = 1.5f;
 
-    private bool hasCollided = false;
+    private Vector3 startPosition;
+    private PlayerStats playerStats;
+
+    #endregion
+
+    #region Properties
+
+    public int ProjectileSpeed => projectileSpeed;
 
     #endregion
 
@@ -20,21 +27,23 @@ public class MagicProjectile : MonoBehaviour
 
     private void Start()
     {
+        startPosition = transform.position;
+        playerStats = FindObjectOfType<PlayerStats>();
         InstantiateProjectileParticle();
-        Destroy(gameObject, magicProjectileLifetime);   // self-destruction
     }
- 
+
+    private void Update()
+    {
+        if (Vector3.Distance(startPosition, transform.position) > playerStats.AttackRange)
+            Destroy(gameObject);
+    }
+
     private void OnCollisionEnter(Collision collision)
     {
-        if (!hasCollided)
-        {
-            hasCollided = true;
-            impactParticle = Instantiate(impactParticle, transform.position, Quaternion.identity);
-            TryApplyDamage(collision);
-
-            Destroy(impactParticle, impactParticleLifetime);
-            Destroy(gameObject);			
-        }
+        impactParticle = Instantiate(impactParticle, transform.position, Quaternion.identity);
+        TryApplyDamage(collision);
+        Destroy(impactParticle, impactParticleLifetime);
+        Destroy(gameObject);			
     }
 
     private void TryApplyDamage(Collision collision)

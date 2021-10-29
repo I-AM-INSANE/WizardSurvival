@@ -8,6 +8,7 @@ public class Player : MonoBehaviour
     #region Fields
 
     private PlayerStats playerStats;
+    private float range = 0;
 
     #endregion
 
@@ -16,7 +17,14 @@ public class Player : MonoBehaviour
     private void Start()
     {
         playerStats = GetComponent<PlayerStats>();
+        range = playerStats.AttackRange;
     }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.DrawWireSphere(transform.position, range);
+    }
+
     public void TakeDamage(int damage)
     {
         playerStats.Health -= damage;
