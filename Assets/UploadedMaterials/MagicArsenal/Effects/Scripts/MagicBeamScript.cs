@@ -5,51 +5,29 @@ using UnityEngine.UI;
 public class MagicBeamScript : MonoBehaviour {
 
     [Header("Prefabs")]
-    public GameObject[] beamLineRendererPrefab;
-    public GameObject[] beamStartPrefab;
-    public GameObject[] beamEndPrefab;
+    [SerializeField] private GameObject[] beamLineRendererPrefab;
+    [SerializeField] private GameObject[] beamStartPrefab;
+    [SerializeField] private GameObject[] beamEndPrefab;
 
-    private int currentBeam = 0;
+    [Header("Adjustable Variables")]
+    [SerializeField] private float beamEndOffset = 1f; //How far from the raycast hit point the end effect is positioned
+    [SerializeField] private float textureScrollSpeed = 4f; //How fast the texture scrolls along the beam
+    [SerializeField] private float textureLengthScale = 12; //Length of the beam texture
 
+    private int currentBeam = 2;
     private GameObject beamStart;
     private GameObject beamEnd;
     private GameObject beam;
     private LineRenderer line;
 
-    [Header("Adjustable Variables")]
-    public float beamEndOffset = 1f; //How far from the raycast hit point the end effect is positioned
-    public float textureScrollSpeed = 8f; //How fast the texture scrolls along the beam
-	public float textureLengthScale = 3; //Length of the beam texture
 
-    [Header("Put Sliders here (Optional)")]
-    public Slider endOffSetSlider; //Use UpdateEndOffset function on slider
-    public Slider scrollSpeedSlider; //Use UpdateScrollSpeed function on slider
-
-    [Header("Put UI Text object here to show beam name")]
-    public Text textBeamName;
-
-    // Use this for initialization
-    void Start()
-    {
-        if (textBeamName)
-            textBeamName.text = beamLineRendererPrefab[currentBeam].name;
-        if (endOffSetSlider)
-            endOffSetSlider.value = beamEndOffset;
-        if (scrollSpeedSlider)
-            scrollSpeedSlider.value = textureScrollSpeed;
-    }
-
-    // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
-            Application.Quit();
-
         if (Input.GetMouseButtonDown(0))
         {
-            beamStart = Instantiate(beamStartPrefab[currentBeam], new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
-            beamEnd = Instantiate(beamEndPrefab[currentBeam], new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
-            beam = Instantiate(beamLineRendererPrefab[currentBeam], new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
+            beamStart = Instantiate(beamStartPrefab[currentBeam], new Vector3(0, 0, 0), Quaternion.identity);
+            beamEnd = Instantiate(beamEndPrefab[currentBeam], new Vector3(0, 0, 0), Quaternion.identity);
+            beam = Instantiate(beamLineRendererPrefab[currentBeam], new Vector3(0, 0, 0), Quaternion.identity);
             line = beam.GetComponent<LineRenderer>();
         }
         if (Input.GetMouseButtonUp(0))
@@ -69,59 +47,6 @@ public class MagicBeamScript : MonoBehaviour {
                 ShootBeamInDir(transform.position, tdir);
             }
         }
-		
-		if (Input.GetKeyDown(KeyCode.RightArrow)) //4 next if commands are just hotkeys for cycling beams
-        {
-            nextBeam();
-        }
-
-		if (Input.GetKeyDown(KeyCode.D))
-		{
-			nextBeam();
-		}
-
-		if (Input.GetKeyDown(KeyCode.A))
-		{
-			previousBeam();
-		}
-        else if (Input.GetKeyDown(KeyCode.LeftArrow))
-        {
-            previousBeam();
-        }
-		
-    }
-
-    public void nextBeam() // Next beam
-    {
-        if (currentBeam < beamLineRendererPrefab.Length - 1)
-            currentBeam++;
-        else
-            currentBeam = 0;
-
-        if (textBeamName)
-            textBeamName.text = beamLineRendererPrefab[currentBeam].name;
-    }
-	
-	    public void previousBeam() // Previous beam
-    {
-        if (currentBeam > - 0)
-            currentBeam--;
-        else
-            currentBeam = beamLineRendererPrefab.Length - 1;
-
-        if (textBeamName)
-            textBeamName.text = beamLineRendererPrefab[currentBeam].name;
-    }
-	
-
-    public void UpdateEndOffset()
-    {
-        beamEndOffset = endOffSetSlider.value;
-    }
-
-    public void UpdateScrollSpeed()
-    {
-        textureScrollSpeed = scrollSpeedSlider.value;
     }
 
     void ShootBeamInDir(Vector3 start, Vector3 dir)

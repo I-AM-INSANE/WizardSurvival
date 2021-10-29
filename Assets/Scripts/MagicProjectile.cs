@@ -8,7 +8,7 @@ public class MagicProjectile : MonoBehaviour
     [SerializeField] private GameObject projectileParticle;
     [SerializeField] private GameObject muzzleParticle;
     [SerializeField] private int damage = 50;
-    [SerializeField] private float magicProjectileLifetime = 1.7f;
+    [SerializeField] private float magicProjectileLifetime = 2.2f;
     [SerializeField] private float impactParticleLifetime = 2f;
     [SerializeField] private float muzzleParticleLifetime = 1.5f;
 
@@ -20,7 +20,7 @@ public class MagicProjectile : MonoBehaviour
 
     private void Start()
     {
-        InstantiateProjectile();
+        InstantiateProjectileParticle();
         Destroy(gameObject, magicProjectileLifetime);   // self-destruction
     }
  
@@ -45,7 +45,7 @@ public class MagicProjectile : MonoBehaviour
         }
     }
 
-    private void InstantiateProjectile()
+    private void InstantiateProjectileParticle()
     {
         projectileParticle = Instantiate(projectileParticle, transform.position, transform.rotation);
         projectileParticle.transform.parent = transform;
