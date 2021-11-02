@@ -5871,6 +5871,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1136788620, guid: eadebbeb5133c5b47ac80acf75ce39b0, type: 3}
+      propertyPath: damage
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1136788620, guid: eadebbeb5133c5b47ac80acf75ce39b0, type: 3}
       propertyPath: projectileSpawnPoint
       value: 
       objectReference: {fileID: 1843266906}

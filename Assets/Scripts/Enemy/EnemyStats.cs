@@ -6,7 +6,7 @@ public class EnemyStats : MonoBehaviour
 {
     #region Fields
 
-    [SerializeField] private int health;
+    [SerializeField] private float health;
     [SerializeField] private int damage;
     [SerializeField] private float attackRange;
     [SerializeField] private float reloadTime;
@@ -15,7 +15,7 @@ public class EnemyStats : MonoBehaviour
 
     #region Properties
 
-    public int Health 
+    public float Health 
     { 
         get { return health; } 
         set { health = value; } 

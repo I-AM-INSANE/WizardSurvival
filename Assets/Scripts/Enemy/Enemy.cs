@@ -16,7 +16,7 @@ public class Enemy : MonoBehaviour, IDamageable
         enemyStats = GetComponent<EnemyStats>();
     }
 
-    public void TakeDamage(int damage)
+    public void TakeDamage(float damage)
     {
         enemyStats.Health -= damage;
         if (enemyStats.Health <= 0)

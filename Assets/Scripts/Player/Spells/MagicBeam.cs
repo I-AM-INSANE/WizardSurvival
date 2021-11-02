@@ -9,6 +9,7 @@ public class MagicBeam : MonoBehaviour
     #region Fields
 
     [SerializeField] private Transform projectileSpawnPoint;
+    [SerializeField] private float damage;
 
     [Header("Prefabs")]
     [SerializeField] private GameObject[] beamLineRendererPrefabs;
@@ -60,7 +61,7 @@ public class MagicBeam : MonoBehaviour
         Vector3 attackDirection = targetFinder.Target.transform.position - projectileSpawnPoint.position;
         ShootBeamInDirection(attackDirection);
         // PauseBetweenDamage()
-        // damage = 25 per sec
+        ApplyDamage();
     }
 
     void ShootBeamInDirection(Vector3 attackDirection)
@@ -77,6 +78,11 @@ public class MagicBeam : MonoBehaviour
         beamEnd.transform.LookAt(beamStart.transform.position);
     }
 
+    private void ApplyDamage()
+    {
+        target.GetComponent<IDamageable>().TakeDamage(damage * Time.fixedDeltaTime);
+    }
+
     private void DestroyBeam()
     {
         Destroy(beamStart);
@@ -85,32 +91,4 @@ public class MagicBeam : MonoBehaviour
     }
 
     #endregion
-
-    //void Update()
-    //{
-    //    if (Input.GetMouseButtonDown(0))
-    //    {
-    //        beamStart = Instantiate(beamStartPrefabs[currentBeam], new Vector3(0, 0, 0), Quaternion.identity);
-    //        beamEnd = Instantiate(beamEndPrefabs[currentBeam], new Vector3(0, 0, 0), Quaternion.identity);
-    //        beam = Instantiate(beamLineRendererPrefabs[currentBeam], new Vector3(0, 0, 0), Quaternion.identity);
-    //        line = beam.GetComponent<LineRenderer>();
-    //    }
-    //    if (Input.GetMouseButtonUp(0))
-    //    {
-    //        Destroy(beamStart);
-    //        Destroy(beamEnd);
-    //        Destroy(beam);
-    //    }
-
-    //    if (Input.GetMouseButton(0))
-    //    {
-    //        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-    //        RaycastHit hit;
-    //        if (Physics.Raycast(ray.origin, ray.direction, out hit))
-    //        {
-    //            Vector3 tdir = hit.point - transform.position;
-    //            ShootBeamInDirection(transform.position, tdir);
-    //        }
-    //    }
-    //}
 }
