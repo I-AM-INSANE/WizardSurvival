@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 405826}
   - component: {fileID: 19897822}
   - component: {fileID: 19912808}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: DustLinger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4697,7 +4697,7 @@ GameObject:
   - component: {fileID: 19933622}
   - component: {fileID: 19867588}
   - component: {fileID: 8293518}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: FireBeamImpact
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9532,7 +9532,7 @@ GameObject:
   m_Component:
   - component: {fileID: 499856}
   - component: {fileID: 10886090}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Point light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9625,7 +9625,7 @@ GameObject:
   - component: {fileID: 463962}
   - component: {fileID: 19917294}
   - component: {fileID: 19885562}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: SmokeLinger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14306,7 +14306,7 @@ GameObject:
   - component: {fileID: 473134}
   - component: {fileID: 19872122}
   - component: {fileID: 19962558}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Particles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18951,7 +18951,7 @@ GameObject:
   - component: {fileID: 484984}
   - component: {fileID: 19808038}
   - component: {fileID: 19908356}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Rings
   m_TagString: Untagged
   m_Icon: {fileID: 0}

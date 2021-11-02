@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 19980130}
   - component: {fileID: 19896464}
   - component: {fileID: 9644576}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: TrailFire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4781,7 +4781,7 @@ GameObject:
   - component: {fileID: 498082}
   - component: {fileID: 19816042}
   - component: {fileID: 19910824}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: FireBall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9480,7 +9480,7 @@ GameObject:
   m_Component:
   - component: {fileID: 490612}
   - component: {fileID: 8279916}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: FireProjectileTiny
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9612,7 +9612,7 @@ GameObject:
   - component: {fileID: 421118}
   - component: {fileID: 19842878}
   - component: {fileID: 19962864}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: TrailSmoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14311,7 +14311,7 @@ GameObject:
   m_Component:
   - component: {fileID: 404760}
   - component: {fileID: 10890774}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Point light
   m_TagString: Untagged
   m_Icon: {fileID: 0}

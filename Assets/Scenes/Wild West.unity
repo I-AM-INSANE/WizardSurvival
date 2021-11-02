@@ -5875,6 +5875,10 @@ PrefabInstance:
       value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 1136788620, guid: eadebbeb5133c5b47ac80acf75ce39b0, type: 3}
+      propertyPath: objToHit.m_Bits
+      value: 1555
+      objectReference: {fileID: 0}
+    - target: {fileID: 1136788620, guid: eadebbeb5133c5b47ac80acf75ce39b0, type: 3}
       propertyPath: projectileSpawnPoint
       value: 
       objectReference: {fileID: 1843266906}
@@ -6058,7 +6062,7 @@ PrefabInstance:
     - target: {fileID: 293619875069273562, guid: eadebbeb5133c5b47ac80acf75ce39b0,
         type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 293619875069273562, guid: eadebbeb5133c5b47ac80acf75ce39b0,
         type: 3}
@@ -17314,7 +17318,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2054295236
 PrefabInstance:

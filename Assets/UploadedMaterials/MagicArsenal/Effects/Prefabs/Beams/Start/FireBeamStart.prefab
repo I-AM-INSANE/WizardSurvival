@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 495476}
   - component: {fileID: 19887748}
   - component: {fileID: 19909426}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: FireBeamStart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4750,7 +4750,7 @@ GameObject:
   - component: {fileID: 453668}
   - component: {fileID: 19877038}
   - component: {fileID: 19968086}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Particles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9439,7 +9439,7 @@ GameObject:
   m_Component:
   - component: {fileID: 413024}
   - component: {fileID: 10838200}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Point light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9532,7 +9532,7 @@ GameObject:
   - component: {fileID: 448828}
   - component: {fileID: 19852440}
   - component: {fileID: 19921446}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Rings
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14213,7 +14213,7 @@ GameObject:
   - component: {fileID: 435218}
   - component: {fileID: 19828844}
   - component: {fileID: 19922846}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Offshoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}

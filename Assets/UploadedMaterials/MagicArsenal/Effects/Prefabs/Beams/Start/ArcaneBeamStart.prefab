@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 486546}
   - component: {fileID: 19890912}
   - component: {fileID: 19938702}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Offshoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4656,7 +4656,7 @@ GameObject:
   - component: {fileID: 497376}
   - component: {fileID: 19831534}
   - component: {fileID: 19907038}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Particles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9346,7 +9346,7 @@ GameObject:
   - component: {fileID: 455582}
   - component: {fileID: 19881566}
   - component: {fileID: 19957838}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Rings
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14028,7 +14028,7 @@ GameObject:
   - component: {fileID: 19857130}
   - component: {fileID: 19954534}
   - component: {fileID: 8257788}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: ArcaneBeamStart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18862,7 +18862,7 @@ GameObject:
   m_Component:
   - component: {fileID: 443860}
   - component: {fileID: 10864654}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Point light
   m_TagString: Untagged
   m_Icon: {fileID: 0}

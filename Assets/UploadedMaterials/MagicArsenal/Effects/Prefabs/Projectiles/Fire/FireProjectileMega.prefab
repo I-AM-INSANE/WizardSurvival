@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 494766}
   - component: {fileID: 19878252}
   - component: {fileID: 19962760}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Rings
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4692,7 +4692,7 @@ GameObject:
   - component: {fileID: 437756}
   - component: {fileID: 19842092}
   - component: {fileID: 19978408}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: TrailEmber
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9372,7 +9372,7 @@ GameObject:
   m_Component:
   - component: {fileID: 488922}
   - component: {fileID: 10846328}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Point light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9465,7 +9465,7 @@ GameObject:
   - component: {fileID: 452934}
   - component: {fileID: 19848462}
   - component: {fileID: 19929888}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Rings
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14145,7 +14145,7 @@ GameObject:
   m_Component:
   - component: {fileID: 452372}
   - component: {fileID: 9670822}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Trail1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14282,7 +14282,7 @@ GameObject:
   m_Component:
   - component: {fileID: 471764}
   - component: {fileID: 9620300}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Trail2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14421,7 +14421,7 @@ GameObject:
   - component: {fileID: 8232366}
   - component: {fileID: 19918588}
   - component: {fileID: 19884922}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: FireProjectileMega
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19238,7 +19238,7 @@ GameObject:
   m_Component:
   - component: {fileID: 403284}
   - component: {fileID: 11488320}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Trails
   m_TagString: Untagged
   m_Icon: {fileID: 0}

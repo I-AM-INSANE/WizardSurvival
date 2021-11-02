@@ -10,6 +10,7 @@ public class MagicBeam : MonoBehaviour
 
     [SerializeField] private Transform projectileSpawnPoint;
     [SerializeField] private float damage;
+    [SerializeField] private LayerMask objToHit;
 
     [Header("Prefabs")]
     [SerializeField] private GameObject[] beamLineRendererPrefabs;
@@ -33,7 +34,7 @@ public class MagicBeam : MonoBehaviour
         targetFinder = GetComponent<TargetFinder>();
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         if (targetFinder.Target != null)
         {
@@ -58,24 +59,38 @@ public class MagicBeam : MonoBehaviour
 
     private void BeamAttack()
     {
-        Vector3 attackDirection = targetFinder.Target.transform.position - projectileSpawnPoint.position;
-        ShootBeamInDirection(attackDirection);
-        // PauseBetweenDamage()
-        ApplyDamage();
+        bool endpointIsEnemy = false;
+        Vector3 endpoint = GetEndpoint(ref endpointIsEnemy);
+        ShootBeamInDirection(endpoint);
+        if (endpointIsEnemy == true)
+            ApplyDamage();
     }
 
-    void ShootBeamInDirection(Vector3 attackDirection)
+    void ShootBeamInDirection(Vector3 endpoint)
     {
-        float halfColliderHeight = target.GetComponent<CapsuleCollider>().height / 2;
         line.positionCount = 2;
         line.SetPosition(0, projectileSpawnPoint.position);
-        line.SetPosition(1, target.position + new Vector3(0, halfColliderHeight, 0));
+        line.SetPosition(1, endpoint);
 
         beamStart.transform.position = projectileSpawnPoint.position;
-        beamEnd.transform.position = target.position + new Vector3(0, halfColliderHeight, 0);
+        beamEnd.transform.position = endpoint;
 
         beamStart.transform.LookAt(beamEnd.transform.position);
         beamEnd.transform.LookAt(beamStart.transform.position);
+    }
+
+    private Vector3 GetEndpoint(ref bool endpointIsEnemy)
+    {
+        Vector3 end;
+        Vector3 attackDirection = target.position - projectileSpawnPoint.position;
+        Physics.Raycast(projectileSpawnPoint.position, attackDirection, out RaycastHit hit, objToHit);
+        end = hit.point;
+        if (hit.collider.TryGetComponent(out Enemy enemy))
+            endpointIsEnemy = true;
+
+        float halfColliderHeight = target.GetComponent<CapsuleCollider>().height / 2;
+        end += new Vector3(0, halfColliderHeight, 0);
+        return end;
     }
 
     private void ApplyDamage()
