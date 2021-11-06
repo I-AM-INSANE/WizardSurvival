@@ -27,7 +27,6 @@ public class MagicProjectile : MonoBehaviour
 
     private void Start()
     {
-        //gameObject.layer = LayerMask.NameToLayer("Ignore Raycast");
         startPosition = transform.position;
         playerStats = FindObjectOfType<PlayerStats>();
         InstantiateProjectileParticle();

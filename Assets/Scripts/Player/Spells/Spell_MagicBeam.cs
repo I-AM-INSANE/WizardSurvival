@@ -3,13 +3,13 @@ using System.Collections;
 using UnityEngine.UI;
 using System;
 
-public class MagicBeam : MonoBehaviour 
+public class Spell_MagicBeam : MonoBehaviour 
 {
 
     #region Fields
 
     [SerializeField] private Transform projectileSpawnPoint;
-    [SerializeField] private float damage;
+    [SerializeField] private float damagePerSecond;
     [SerializeField] private LayerMask objToHit;
 
     [Header("Prefabs")]
@@ -95,7 +95,7 @@ public class MagicBeam : MonoBehaviour
 
     private void ApplyDamage()
     {
-        target.GetComponent<IDamageable>().TakeDamage(damage * Time.fixedDeltaTime);
+        target.GetComponent<IDamageable>().TakeDamage(damagePerSecond * Time.fixedDeltaTime);
     }
 
     private void DestroyBeam()

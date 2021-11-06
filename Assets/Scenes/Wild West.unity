@@ -5871,189 +5871,27 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1136788620, guid: eadebbeb5133c5b47ac80acf75ce39b0, type: 3}
-      propertyPath: damage
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1136788620, guid: eadebbeb5133c5b47ac80acf75ce39b0, type: 3}
+      propertyPath: damagePerSecond
       value: 25
       objectReference: {fileID: 0}
-    - target: {fileID: 1136788620, guid: eadebbeb5133c5b47ac80acf75ce39b0, type: 3}
-      propertyPath: objToHit.m_Bits
-      value: 1555
+    - target: {fileID: 1673414882, guid: eadebbeb5133c5b47ac80acf75ce39b0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1136788620, guid: eadebbeb5133c5b47ac80acf75ce39b0, type: 3}
-      propertyPath: projectileSpawnPoint
-      value: 
-      objectReference: {fileID: 1843266906}
-    - target: {fileID: 1136788620, guid: eadebbeb5133c5b47ac80acf75ce39b0, type: 3}
-      propertyPath: beamEndPrefabs.Array.size
-      value: 10
+    - target: {fileID: 293619875069273541, guid: eadebbeb5133c5b47ac80acf75ce39b0,
+        type: 3}
+      propertyPath: m_Height
+      value: 1.3
       objectReference: {fileID: 0}
-    - target: {fileID: 1136788620, guid: eadebbeb5133c5b47ac80acf75ce39b0, type: 3}
-      propertyPath: beamStartPrefabs.Array.size
-      value: 10
+    - target: {fileID: 293619875069273541, guid: eadebbeb5133c5b47ac80acf75ce39b0,
+        type: 3}
+      propertyPath: m_Center.y
+      value: -1.15
       objectReference: {fileID: 0}
-    - target: {fileID: 1136788620, guid: eadebbeb5133c5b47ac80acf75ce39b0, type: 3}
-      propertyPath: beamEndPrefabs.Array.data[0]
-      value: 
-      objectReference: {fileID: 175948, guid: d6fd535eb4c308f45b5c78773315e81c, type: 3}
-    - target: {fileID: 1136788620, guid: eadebbeb5133c5b47ac80acf75ce39b0, type: 3}
-      propertyPath: beamEndPrefabs.Array.data[1]
-      value: 
-      objectReference: {fileID: 146702, guid: 887fc254e5b40474e9591de0ae156bd8, type: 3}
-    - target: {fileID: 1136788620, guid: eadebbeb5133c5b47ac80acf75ce39b0, type: 3}
-      propertyPath: beamEndPrefabs.Array.data[2]
-      value: 
-      objectReference: {fileID: 143488, guid: 7ab599370938e1948a5eb2967f1cbd66, type: 3}
-    - target: {fileID: 1136788620, guid: eadebbeb5133c5b47ac80acf75ce39b0, type: 3}
-      propertyPath: beamEndPrefabs.Array.data[3]
-      value: 
-      objectReference: {fileID: 113256, guid: 01b32c1e97b390f4b82f26b2d4a847ee, type: 3}
-    - target: {fileID: 1136788620, guid: eadebbeb5133c5b47ac80acf75ce39b0, type: 3}
-      propertyPath: beamEndPrefabs.Array.data[4]
-      value: 
-      objectReference: {fileID: 182458, guid: 192a807de5bc83c498bf94f94e6f6b75, type: 3}
-    - target: {fileID: 1136788620, guid: eadebbeb5133c5b47ac80acf75ce39b0, type: 3}
-      propertyPath: beamEndPrefabs.Array.data[5]
-      value: 
-      objectReference: {fileID: 171424, guid: 33fa9eb9b5b7b784abdb65ad8c16ee80, type: 3}
-    - target: {fileID: 1136788620, guid: eadebbeb5133c5b47ac80acf75ce39b0, type: 3}
-      propertyPath: beamEndPrefabs.Array.data[6]
-      value: 
-      objectReference: {fileID: 110462, guid: 1cf4c9887d4c6874692243f51e44796a, type: 3}
-    - target: {fileID: 1136788620, guid: eadebbeb5133c5b47ac80acf75ce39b0, type: 3}
-      propertyPath: beamEndPrefabs.Array.data[7]
-      value: 
-      objectReference: {fileID: 114968, guid: 66daa82b181beef4d9465affcd97d06e, type: 3}
-    - target: {fileID: 1136788620, guid: eadebbeb5133c5b47ac80acf75ce39b0, type: 3}
-      propertyPath: beamEndPrefabs.Array.data[8]
-      value: 
-      objectReference: {fileID: 100050, guid: 325422360e5730141adac507f0c6a393, type: 3}
-    - target: {fileID: 1136788620, guid: eadebbeb5133c5b47ac80acf75ce39b0, type: 3}
-      propertyPath: beamEndPrefabs.Array.data[9]
-      value: 
-      objectReference: {fileID: 133292, guid: 75d3878d3e4132f41966e0e54fa81406, type: 3}
-    - target: {fileID: 1136788620, guid: eadebbeb5133c5b47ac80acf75ce39b0, type: 3}
-      propertyPath: beamStartPrefabs.Array.data[0]
-      value: 
-      objectReference: {fileID: 158756, guid: 8396fce600232da4dbbf9a8c440e40ba, type: 3}
-    - target: {fileID: 1136788620, guid: eadebbeb5133c5b47ac80acf75ce39b0, type: 3}
-      propertyPath: beamStartPrefabs.Array.data[1]
-      value: 
-      objectReference: {fileID: 179694, guid: cf0bdea0aea918340a7a202187457d8c, type: 3}
-    - target: {fileID: 1136788620, guid: eadebbeb5133c5b47ac80acf75ce39b0, type: 3}
-      propertyPath: beamStartPrefabs.Array.data[2]
-      value: 
-      objectReference: {fileID: 101350, guid: ea72aca1214b2ab4daca57345d563d07, type: 3}
-    - target: {fileID: 1136788620, guid: eadebbeb5133c5b47ac80acf75ce39b0, type: 3}
-      propertyPath: beamStartPrefabs.Array.data[3]
-      value: 
-      objectReference: {fileID: 134198, guid: 0b1a09f32ca9ca84b8ffecba7c9410b3, type: 3}
-    - target: {fileID: 1136788620, guid: eadebbeb5133c5b47ac80acf75ce39b0, type: 3}
-      propertyPath: beamStartPrefabs.Array.data[4]
-      value: 
-      objectReference: {fileID: 146808, guid: 3b44f00d62229884a99c8bd5c5a1a247, type: 3}
-    - target: {fileID: 1136788620, guid: eadebbeb5133c5b47ac80acf75ce39b0, type: 3}
-      propertyPath: beamStartPrefabs.Array.data[5]
-      value: 
-      objectReference: {fileID: 169500, guid: 79baaa55e641be0439275b8dae7af740, type: 3}
-    - target: {fileID: 1136788620, guid: eadebbeb5133c5b47ac80acf75ce39b0, type: 3}
-      propertyPath: beamStartPrefabs.Array.data[6]
-      value: 
-      objectReference: {fileID: 117412, guid: 90b9eccaf45751f4dbef1da136dfb7e2, type: 3}
-    - target: {fileID: 1136788620, guid: eadebbeb5133c5b47ac80acf75ce39b0, type: 3}
-      propertyPath: beamStartPrefabs.Array.data[7]
-      value: 
-      objectReference: {fileID: 158942, guid: 7746042b76677fa4897bba11a2964416, type: 3}
-    - target: {fileID: 1136788620, guid: eadebbeb5133c5b47ac80acf75ce39b0, type: 3}
-      propertyPath: beamStartPrefabs.Array.data[8]
-      value: 
-      objectReference: {fileID: 137820, guid: 170db8eff3ea73c41b1a515951f03d70, type: 3}
-    - target: {fileID: 1136788620, guid: eadebbeb5133c5b47ac80acf75ce39b0, type: 3}
-      propertyPath: beamStartPrefabs.Array.data[9]
-      value: 
-      objectReference: {fileID: 132702, guid: 44b39dcf5d036464b9791669232296aa, type: 3}
-    - target: {fileID: 1136788620, guid: eadebbeb5133c5b47ac80acf75ce39b0, type: 3}
-      propertyPath: beamStartPrefabs.Array.data[10]
-      value: 
-      objectReference: {fileID: 158756, guid: 8396fce600232da4dbbf9a8c440e40ba, type: 3}
-    - target: {fileID: 1136788620, guid: eadebbeb5133c5b47ac80acf75ce39b0, type: 3}
-      propertyPath: beamStartPrefabs.Array.data[11]
-      value: 
-      objectReference: {fileID: 179694, guid: cf0bdea0aea918340a7a202187457d8c, type: 3}
-    - target: {fileID: 1136788620, guid: eadebbeb5133c5b47ac80acf75ce39b0, type: 3}
-      propertyPath: beamStartPrefabs.Array.data[12]
-      value: 
-      objectReference: {fileID: 101350, guid: ea72aca1214b2ab4daca57345d563d07, type: 3}
-    - target: {fileID: 1136788620, guid: eadebbeb5133c5b47ac80acf75ce39b0, type: 3}
-      propertyPath: beamStartPrefabs.Array.data[13]
-      value: 
-      objectReference: {fileID: 134198, guid: 0b1a09f32ca9ca84b8ffecba7c9410b3, type: 3}
-    - target: {fileID: 1136788620, guid: eadebbeb5133c5b47ac80acf75ce39b0, type: 3}
-      propertyPath: beamStartPrefabs.Array.data[14]
-      value: 
-      objectReference: {fileID: 146808, guid: 3b44f00d62229884a99c8bd5c5a1a247, type: 3}
-    - target: {fileID: 1136788620, guid: eadebbeb5133c5b47ac80acf75ce39b0, type: 3}
-      propertyPath: beamStartPrefabs.Array.data[15]
-      value: 
-      objectReference: {fileID: 169500, guid: 79baaa55e641be0439275b8dae7af740, type: 3}
-    - target: {fileID: 1136788620, guid: eadebbeb5133c5b47ac80acf75ce39b0, type: 3}
-      propertyPath: beamStartPrefabs.Array.data[16]
-      value: 
-      objectReference: {fileID: 117412, guid: 90b9eccaf45751f4dbef1da136dfb7e2, type: 3}
-    - target: {fileID: 1136788620, guid: eadebbeb5133c5b47ac80acf75ce39b0, type: 3}
-      propertyPath: beamStartPrefabs.Array.data[17]
-      value: 
-      objectReference: {fileID: 158942, guid: 7746042b76677fa4897bba11a2964416, type: 3}
-    - target: {fileID: 1136788620, guid: eadebbeb5133c5b47ac80acf75ce39b0, type: 3}
-      propertyPath: beamStartPrefabs.Array.data[18]
-      value: 
-      objectReference: {fileID: 137820, guid: 170db8eff3ea73c41b1a515951f03d70, type: 3}
-    - target: {fileID: 1136788620, guid: eadebbeb5133c5b47ac80acf75ce39b0, type: 3}
-      propertyPath: beamStartPrefabs.Array.data[19]
-      value: 
-      objectReference: {fileID: 132702, guid: 44b39dcf5d036464b9791669232296aa, type: 3}
-    - target: {fileID: 1136788620, guid: eadebbeb5133c5b47ac80acf75ce39b0, type: 3}
-      propertyPath: beamLineRendererPrefabs.Array.size
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 1136788620, guid: eadebbeb5133c5b47ac80acf75ce39b0, type: 3}
-      propertyPath: beamLineRendererPrefabs.Array.data[0]
-      value: 
-      objectReference: {fileID: 168570, guid: 1f7452042ec77d94ea7cece5cc4816fc, type: 3}
-    - target: {fileID: 1136788620, guid: eadebbeb5133c5b47ac80acf75ce39b0, type: 3}
-      propertyPath: beamLineRendererPrefabs.Array.data[1]
-      value: 
-      objectReference: {fileID: 168570, guid: 3827d5026e528924493e36340309f078, type: 3}
-    - target: {fileID: 1136788620, guid: eadebbeb5133c5b47ac80acf75ce39b0, type: 3}
-      propertyPath: beamLineRendererPrefabs.Array.data[2]
-      value: 
-      objectReference: {fileID: 168570, guid: 8fe4893f4372fc84fb0c43a1c8860725, type: 3}
-    - target: {fileID: 1136788620, guid: eadebbeb5133c5b47ac80acf75ce39b0, type: 3}
-      propertyPath: beamLineRendererPrefabs.Array.data[3]
-      value: 
-      objectReference: {fileID: 168570, guid: dde30d1733e55b941ada7e3a234bb74c, type: 3}
-    - target: {fileID: 1136788620, guid: eadebbeb5133c5b47ac80acf75ce39b0, type: 3}
-      propertyPath: beamLineRendererPrefabs.Array.data[4]
-      value: 
-      objectReference: {fileID: 168570, guid: 13d778ebbfff82149bdc5ed15fbda9c9, type: 3}
-    - target: {fileID: 1136788620, guid: eadebbeb5133c5b47ac80acf75ce39b0, type: 3}
-      propertyPath: beamLineRendererPrefabs.Array.data[5]
-      value: 
-      objectReference: {fileID: 168570, guid: 36346b1c7b5c7ed48aa6244c315c55cf, type: 3}
-    - target: {fileID: 1136788620, guid: eadebbeb5133c5b47ac80acf75ce39b0, type: 3}
-      propertyPath: beamLineRendererPrefabs.Array.data[6]
-      value: 
-      objectReference: {fileID: 168570, guid: 4cda6df8f00347b4f9a35657fe9374d3, type: 3}
-    - target: {fileID: 1136788620, guid: eadebbeb5133c5b47ac80acf75ce39b0, type: 3}
-      propertyPath: beamLineRendererPrefabs.Array.data[7]
-      value: 
-      objectReference: {fileID: 168570, guid: f8910e850e9dcdc44bb3454608bf7f64, type: 3}
-    - target: {fileID: 1136788620, guid: eadebbeb5133c5b47ac80acf75ce39b0, type: 3}
-      propertyPath: beamLineRendererPrefabs.Array.data[8]
-      value: 
-      objectReference: {fileID: 168570, guid: d22930b63c5f91049b1539535ad958cd, type: 3}
-    - target: {fileID: 1136788620, guid: eadebbeb5133c5b47ac80acf75ce39b0, type: 3}
-      propertyPath: beamLineRendererPrefabs.Array.data[9]
-      value: 
-      objectReference: {fileID: 168570, guid: cc9af0e16354a3c4aaa2860db34ca4a0, type: 3}
     - target: {fileID: 293619875069273543, guid: eadebbeb5133c5b47ac80acf75ce39b0,
         type: 3}
       propertyPath: m_Name
@@ -6062,7 +5900,7 @@ PrefabInstance:
     - target: {fileID: 293619875069273562, guid: eadebbeb5133c5b47ac80acf75ce39b0,
         type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 293619875069273562, guid: eadebbeb5133c5b47ac80acf75ce39b0,
         type: 3}
@@ -6072,7 +5910,7 @@ PrefabInstance:
     - target: {fileID: 293619875069273562, guid: eadebbeb5133c5b47ac80acf75ce39b0,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.05
+      value: 3.04
       objectReference: {fileID: 0}
     - target: {fileID: 293619875069273562, guid: eadebbeb5133c5b47ac80acf75ce39b0,
         type: 3}
@@ -6114,10 +5952,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 293619875069273566, guid: eadebbeb5133c5b47ac80acf75ce39b0,
+    - target: {fileID: 2893173193975007942, guid: eadebbeb5133c5b47ac80acf75ce39b0,
         type: 3}
-      propertyPath: moveSpeed
-      value: 5
+      propertyPath: magicCircle
+      value: 
+      objectReference: {fileID: 131454, guid: 495b63906f5f3bb40bf58baeb0848011, type: 3}
+    - target: {fileID: 2893173193975007942, guid: eadebbeb5133c5b47ac80acf75ce39b0,
+        type: 3}
+      propertyPath: damagePerSecond
+      value: 25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eadebbeb5133c5b47ac80acf75ce39b0, type: 3}
@@ -9726,7 +9569,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1216580572
 PrefabInstance:
@@ -15709,12 +15552,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1717714003348942320, guid: c778ec0081d55894290fec388d5f70c2,
     type: 3}
   m_PrefabInstance: {fileID: 842872821}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1843266906 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 293619875789505867, guid: eadebbeb5133c5b47ac80acf75ce39b0,
-    type: 3}
-  m_PrefabInstance: {fileID: 724377209}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1855653969
 PrefabInstance:
