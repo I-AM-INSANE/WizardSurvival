@@ -1,13 +1,12 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MagicCircle : MonoBehaviour
+public class Hellfire : MonoBehaviour
 {
     #region Fields
 
-    private Spell_MagicCircle spell_MagicCircle;
+    private Spell_Hellfire spell_Hellfire;
 
     #endregion
 
@@ -15,7 +14,8 @@ public class MagicCircle : MonoBehaviour
 
     private void Start()
     {
-        spell_MagicCircle = FindObjectOfType<Spell_MagicCircle>();
+        spell_Hellfire = FindObjectOfType<Spell_Hellfire>();
+        Destroy(gameObject, spell_Hellfire.HellfireLifetime);
     }
 
     private void OnTriggerStay(Collider other)
@@ -28,7 +28,7 @@ public class MagicCircle : MonoBehaviour
 
     private void ApplyDamage(Collider other)
     {
-         other.GetComponent<IDamageable>().TakeDamage(spell_MagicCircle.DamagePerSecond * Time.fixedDeltaTime);
+        other.GetComponent<IDamageable>().TakeDamage(spell_Hellfire.DamagePerSecond * Time.fixedDeltaTime);
     }
 
     #endregion
