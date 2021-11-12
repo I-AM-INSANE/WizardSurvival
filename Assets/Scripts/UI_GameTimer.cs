@@ -1,7 +1,7 @@
 ﻿using TMPro;
 using UnityEngine;
 
-public class GameTimer : MonoBehaviour
+public class UI_GameTimer : MonoBehaviour
 {
     #region Fields
 

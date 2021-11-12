@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
 {
@@ -10,6 +8,7 @@ public class PlayerStats : MonoBehaviour
     [SerializeField] private float moveSpeed = 5f;
     [SerializeField] private float attackRange = 10f;
     [SerializeField] private float reloadTime = 0.7f;
+    [SerializeField] private int level = 1;
 
     #endregion
 
@@ -37,6 +36,12 @@ public class PlayerStats : MonoBehaviour
     {
         get { return reloadTime; }
         set { reloadTime = value; }
+    }
+
+    public int Level
+    {
+        get { return level; }
+        set { level = value; }
     }
 
     #endregion
