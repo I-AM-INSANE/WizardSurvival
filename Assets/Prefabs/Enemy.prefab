@@ -198,6 +198,7 @@ MonoBehaviour:
   damage: 20
   attackRange: 3
   reloadTime: 1
+  xpValue: 20
 --- !u!114 &2666970300414377847
 MonoBehaviour:
   m_ObjectHideFlags: 0

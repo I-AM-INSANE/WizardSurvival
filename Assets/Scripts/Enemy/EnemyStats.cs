@@ -10,6 +10,7 @@ public class EnemyStats : MonoBehaviour
     [SerializeField] private int damage;
     [SerializeField] private float attackRange;
     [SerializeField] private float reloadTime;
+    [SerializeField] private int xpValue;
 
     #endregion
 
@@ -35,6 +36,8 @@ public class EnemyStats : MonoBehaviour
         get { return reloadTime; }
         set { reloadTime = value; }
     }
+
+    public int XPValue => xpValue;
 
     #endregion
 }

@@ -33,7 +33,7 @@ public class UI_PlayerLevel : MonoBehaviour
     private void RefreshText()
     {
         textMeshProUGUI.text = $"{prefixLevel} {playerStats.Level}\n" +
-            $"{prefixXP} {playerExperienceSystem.CurrentXP}/{playerExperienceSystem.LimitXP}";
+            $"{prefixXP} {playerExperienceSystem.CurrentXP}/{playerExperienceSystem.XPLimit}";
     }
 
     #endregion

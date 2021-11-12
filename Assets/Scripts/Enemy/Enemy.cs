@@ -6,6 +6,7 @@ public class Enemy : MonoBehaviour, IDamageable
     #region Fields
 
     private EnemyStats enemyStats;
+    private PlayerExperienceSystem playerExperienceSystem;
 
     #endregion
 
@@ -14,6 +15,7 @@ public class Enemy : MonoBehaviour, IDamageable
     private void Start()
     {
         enemyStats = GetComponent<EnemyStats>();
+        playerExperienceSystem = FindObjectOfType<PlayerExperienceSystem>();
     }
 
     public void TakeDamage(float damage)
@@ -26,6 +28,7 @@ public class Enemy : MonoBehaviour, IDamageable
     private void Die()
     {
         // die anim
+        playerExperienceSystem.AddXP(enemyStats.XPValue);
         Destroy(gameObject);
     }
 

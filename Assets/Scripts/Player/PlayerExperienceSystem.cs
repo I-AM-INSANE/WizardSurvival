@@ -6,18 +6,18 @@ public class PlayerExperienceSystem : MonoBehaviour
 {
     #region Fields
 
-    [SerializeField] private int initialLimitXP;
-    [SerializeField] private int increaseLimitXPPerLevel;
+    [SerializeField] private int xpInitialLimit;
+    [SerializeField] private int xpIncreasingLimitPerLevel;
 
     private PlayerStats playerStats;
-    private int limitXP;
+    private int xpLimit;
     private int currentXP = 0;
 
     #endregion
 
     #region Properties
 
-    public int LimitXP => limitXP;
+    public int XPLimit => xpLimit;
 
     public int CurrentXP => currentXP;
 
@@ -27,7 +27,7 @@ public class PlayerExperienceSystem : MonoBehaviour
 
     private void Start()
     {
-        limitXP = initialLimitXP;
+        xpLimit = xpInitialLimit;
         playerStats = GetComponent<PlayerStats>();
     }
 
@@ -35,11 +35,11 @@ public class PlayerExperienceSystem : MonoBehaviour
     {
         currentXP += xp;
         
-        if (currentXP >= limitXP)
+        if (currentXP >= xpLimit)
         {
-            limitXP += increaseLimitXPPerLevel;
-            currentXP = 0;
             playerStats.Level++;
+            xpLimit += xpIncreasingLimitPerLevel;
+            currentXP = 0;
         }
     }
 
