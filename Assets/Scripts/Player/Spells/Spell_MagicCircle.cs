@@ -1,17 +1,9 @@
 ﻿using UnityEngine;
-
-public class Spell_MagicCircle : MonoBehaviour
+public class Spell_MagicCircle : Base_MagicSpell
 {
     #region Fields
 
     [SerializeField] private GameObject magicCircle;
-    [SerializeField] private float damagePerSecond;
-
-    #endregion
-
-    #region Properties
-
-    public float DamagePerSecond => damagePerSecond;
 
     #endregion
 

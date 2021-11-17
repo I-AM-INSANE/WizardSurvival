@@ -20,6 +20,8 @@ GameObject:
   - component: {fileID: 1136788620}
   - component: {fileID: 2893173193975007942}
   - component: {fileID: 850596298}
+  - component: {fileID: 724377211}
+  - component: {fileID: 47164013484669265}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -108,6 +110,7 @@ MonoBehaviour:
   moveSpeed: 5
   attackRange: 20
   reloadTime: 0.7
+  level: 1
 --- !u!114 &293619875069273540
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -169,13 +172,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 293619875069273543}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ede43347e5e422d4692b421d77e89d7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectileSpawnPoint: {fileID: 293619875789505867}
   damagePerSecond: 25
+  extraDamagePerLevel: 5
+  projectileSpawnPoint: {fileID: 293619875789505867}
   objToHit:
     serializedVersion: 2
     m_Bits: 1555
@@ -219,13 +223,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 293619875069273543}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f55b7a74dbc88c8479e09d5f8a37bcd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  magicCircle: {fileID: 131454, guid: 495b63906f5f3bb40bf58baeb0848011, type: 3}
   damagePerSecond: 25
+  extraDamagePerLevel: 5
+  magicCircle: {fileID: 131454, guid: 495b63906f5f3bb40bf58baeb0848011, type: 3}
 --- !u!114 &850596298
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -238,10 +243,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4d4e1b876db4d1489108f629e03a649, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hellfire: {fileID: 196820, guid: d378f9be06e3f7f4e972fac2a76e5fa3, type: 3}
   damagePerSecond: 100
+  extraDamagePerLevel: 5
+  hellfire: {fileID: 196820, guid: d378f9be06e3f7f4e972fac2a76e5fa3, type: 3}
   hellfireLifetime: 2
   reloadTime: 10
+--- !u!114 &724377211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 293619875069273543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6047460b06244b14a9718efdff6e8e5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  xpInitialLimit: 100
+  xpLimitExtraPerLevel: 10
+--- !u!114 &47164013484669265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 293619875069273543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b32ea1ecfee39749b3e7d97b13f278d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &293619875789505866
 GameObject:
   m_ObjectHideFlags: 0

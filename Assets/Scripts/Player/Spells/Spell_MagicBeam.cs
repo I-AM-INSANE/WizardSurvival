@@ -1,12 +1,11 @@
 ﻿using UnityEngine;
 
-public class Spell_MagicBeam : MonoBehaviour 
+public class Spell_MagicBeam : Base_MagicSpell 
 {
 
     #region Fields
 
     [SerializeField] private Transform projectileSpawnPoint;
-    [SerializeField] private float damagePerSecond;
     [SerializeField] private LayerMask objToHit;
 
     [Header("Prefabs")]
@@ -92,7 +91,7 @@ public class Spell_MagicBeam : MonoBehaviour
 
     private void ApplyDamage()
     {
-        target.GetComponent<IDamageable>().TakeDamage(damagePerSecond * Time.fixedDeltaTime);
+        target.GetComponent<IDamageable>().TakeDamage(DamagePerSecond * Time.fixedDeltaTime);
     }
 
     private void DestroyBeam()

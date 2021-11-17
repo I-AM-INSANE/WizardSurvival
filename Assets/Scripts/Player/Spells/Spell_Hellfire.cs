@@ -1,12 +1,11 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-public class Spell_Hellfire : MonoBehaviour
+public class Spell_Hellfire : Base_MagicSpell
 {
     #region Fields
 
     [SerializeField] private GameObject hellfire;
-    [SerializeField] private float damagePerSecond;
     [SerializeField] private float hellfireLifetime;
     [SerializeField] private float reloadTime;
 
@@ -15,8 +14,6 @@ public class Spell_Hellfire : MonoBehaviour
     #endregion
 
     #region Properties
-
-    public float DamagePerSecond => damagePerSecond;
 
     public float HellfireLifetime => hellfireLifetime;
 
@@ -32,7 +29,6 @@ public class Spell_Hellfire : MonoBehaviour
             StartCoroutine(ReloadRoutine());
         }
     }
-
     private IEnumerator ReloadRoutine()
     {
         isReloading = true;

@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System;
 
 [RequireComponent(typeof(PlayerStats))]
 
@@ -7,11 +8,13 @@ public class PlayerExperienceSystem : MonoBehaviour
     #region Fields
 
     [SerializeField] private int xpInitialLimit;
-    [SerializeField] private int xpIncreasingLimitPerLevel;
+    [SerializeField] private int xpLimitExtraPerLevel;
 
     private PlayerStats playerStats;
     private int xpLimit;
     private int currentXP = 0;
+
+    public event Action OnLevelUp;
 
     #endregion
 
@@ -38,7 +41,8 @@ public class PlayerExperienceSystem : MonoBehaviour
         if (currentXP >= xpLimit)
         {
             playerStats.Level++;
-            xpLimit += xpIncreasingLimitPerLevel;
+            OnLevelUp.Invoke();
+            xpLimit += xpLimitExtraPerLevel;
             currentXP = 0;
         }
     }
