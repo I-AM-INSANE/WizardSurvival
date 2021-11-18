@@ -6149,8 +6149,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 850596298, guid: eadebbeb5133c5b47ac80acf75ce39b0, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 850596298, guid: eadebbeb5133c5b47ac80acf75ce39b0, type: 3}
       propertyPath: spellName
       value: Hellfire
+      objectReference: {fileID: 0}
+    - target: {fileID: 1136788620, guid: eadebbeb5133c5b47ac80acf75ce39b0, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1136788620, guid: eadebbeb5133c5b47ac80acf75ce39b0, type: 3}
       propertyPath: spellName
@@ -6214,6 +6222,21 @@ PrefabInstance:
     - target: {fileID: 293619875069273562, guid: eadebbeb5133c5b47ac80acf75ce39b0,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 293619875069273563, guid: eadebbeb5133c5b47ac80acf75ce39b0,
+        type: 3}
+      propertyPath: extraDamagePerLevel
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 293619875069273566, guid: eadebbeb5133c5b47ac80acf75ce39b0,
+        type: 3}
+      propertyPath: extraDamagePerLevel
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2893173193975007942, guid: eadebbeb5133c5b47ac80acf75ce39b0,
+        type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2893173193975007942, guid: eadebbeb5133c5b47ac80acf75ce39b0,
@@ -8323,6 +8346,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 492852, guid: 1be5e82b1cbc5d243947fbcf678997fa,
     type: 3}
   m_PrefabInstance: {fileID: 940286192}
+  m_PrefabAsset: {fileID: 0}
+--- !u!20 &941008724 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 293619876387407858, guid: eadebbeb5133c5b47ac80acf75ce39b0,
+    type: 3}
+  m_PrefabInstance: {fileID: 724377209}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &942504907 stripped
 GameObject:
@@ -15417,7 +15446,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 941008724}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -15426,7 +15455,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!224 &1778132940
 RectTransform:

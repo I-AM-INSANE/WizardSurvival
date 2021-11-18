@@ -7,7 +7,7 @@ public class MagicProjectile : MonoBehaviour
     [SerializeField] private GameObject impactParticle;
     [SerializeField] private GameObject projectileParticle;
     [SerializeField] private GameObject muzzleParticle;
-    [SerializeField] private int damage = 50;
+    [SerializeField] private int damage;
     [SerializeField] private int projectileSpeed = 500;
     [SerializeField] private float impactParticleLifetime = 2f;
     [SerializeField] private float muzzleParticleLifetime = 1.5f;
@@ -46,11 +46,16 @@ public class MagicProjectile : MonoBehaviour
         Destroy(gameObject);			
     }
 
+    public void AddExtraDamage(int extraDamage)
+    {
+        damage += extraDamage;
+    }
+
     private void TryApplyDamage(Collision collision)
     {
         if (collision.gameObject.TryGetComponent(out IDamageable idamageable))
         {
-            idamageable.TakeDamage(damage);
+            idamageable.TakeDamage(damage + playerStats.BaseDamage);
         }
     }
 

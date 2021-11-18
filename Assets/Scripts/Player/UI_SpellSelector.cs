@@ -24,7 +24,7 @@ public class UI_SpellSelector : MonoBehaviour
 
     #region Methods
 
-    private void Awake()
+    private void Start()
     {
         spellLevelController = FindObjectOfType<SpellLevelController>();
         mouseLook = FindObjectOfType<MouseLook>();
@@ -73,6 +73,7 @@ public class UI_SpellSelector : MonoBehaviour
             playerMovement.enabled = false;
             mouseLook.enabled = false;
             Time.timeScale = 0;
+            Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
         }
         else if(state == GameStates.resume)
@@ -80,6 +81,7 @@ public class UI_SpellSelector : MonoBehaviour
             playerMovement.enabled = true;
             mouseLook.enabled = true;
             Time.timeScale = 1;
+            Cursor.visible = false;
             Cursor.lockState = CursorLockMode.Locked;
         }
     }

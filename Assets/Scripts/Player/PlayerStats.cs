@@ -6,6 +6,8 @@ public class PlayerStats : MonoBehaviour
 
     [SerializeField] private int health = 100;
     [SerializeField] private float moveSpeed = 5f;
+    [SerializeField] private int baseDamage = 0;
+    [SerializeField] private int extraDamagePerLevel = 3;
     [SerializeField] private float attackRange = 10f;
     [SerializeField] private float reloadTime = 0.7f;
     [SerializeField] private int level = 1;
@@ -25,6 +27,14 @@ public class PlayerStats : MonoBehaviour
         get { return moveSpeed; }
         set { moveSpeed = value; }
     }
+
+    public int BaseDamage
+    {
+        get { return baseDamage; }
+        set { baseDamage = value; }
+    }
+
+    public int ExtraDamagePerLevel => extraDamagePerLevel;
 
     public float AttackRange
     {

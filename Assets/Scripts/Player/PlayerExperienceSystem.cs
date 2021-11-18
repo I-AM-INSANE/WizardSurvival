@@ -37,14 +37,20 @@ public class PlayerExperienceSystem : MonoBehaviour
     public void AddXP(int xp)
     {
         currentXP += xp;
-        
+
         if (currentXP >= xpLimit)
-        {
-            playerStats.Level++;
+        { 
+            RefreshPlayerStats();
             OnLevelUp.Invoke();
             xpLimit += xpLimitExtraPerLevel;
             currentXP = 0;
         }
+    }
+
+    private void RefreshPlayerStats()
+    {
+        playerStats.Level++;
+        playerStats.BaseDamage += playerStats.ExtraDamagePerLevel;
     }
 
     #endregion

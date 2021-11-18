@@ -30,13 +30,22 @@ public class SpellLevelController : MonoBehaviour
 
     public void IncreaseSpellLevel(Base_MagicSpell spell)
     {
+        if (spell.SpellLevel == 0)
+            spell.enabled = true;
         spell.LevelUp();
     }
 
     private void RunSpellSelector()
     {
-        ui_SpellSelector.RefreshSelector(GetRandomSpell(), GetRandomSpell());
+        Base_MagicSpell spell_0 = GetRandomSpell();
+        Base_MagicSpell spell_1;
+        do
+        {
+            spell_1 = GetRandomSpell();
+        } while (spell_0 == spell_1);
+
         ui_SpellSelector.gameObject.SetActive(true);
+        ui_SpellSelector.RefreshSelector(spell_0, spell_1);
     }
 
     private Base_MagicSpell GetRandomSpell()

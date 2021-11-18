@@ -11,13 +11,14 @@ public class Base_MagicSpell : MonoBehaviour
     [SerializeField] private float extraDamagePerLevel;
 
     private int spellLevel = 0;
-    //private string textForSpellSelector = "Increase level";
 
     #endregion
 
     #region Properties
 
     public float DamagePerSecond => damagePerSecond;
+
+    public int SpellLevel => spellLevel;
 
     public string TextForSpellSelector 
     { 
@@ -32,6 +33,12 @@ public class Base_MagicSpell : MonoBehaviour
     public virtual void LevelUp() 
     {
         spellLevel++;
+        if (spellLevel > 1)
+            AddExtraDamage();
+    }
+
+    private void AddExtraDamage()
+    {
         damagePerSecond += extraDamagePerLevel;
     }
 
