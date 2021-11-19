@@ -38,8 +38,6 @@ public class PlayerExperienceSystem : MonoBehaviour
     public void AddXP(int xp)
     {
         currentXP += xp;
-        OnXpGot.Invoke();
-
         if (currentXP >= xpLimit)
         { 
             RefreshPlayerStats();
@@ -47,6 +45,8 @@ public class PlayerExperienceSystem : MonoBehaviour
             xpLimit += xpLimitExtraPerLevel;
             currentXP = 0;
         }
+
+        OnXpGot.Invoke();
     }
 
     private void RefreshPlayerStats()

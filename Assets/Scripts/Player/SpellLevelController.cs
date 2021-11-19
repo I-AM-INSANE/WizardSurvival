@@ -45,8 +45,8 @@ public class SpellLevelController : MonoBehaviour
             spell_1 = GetRandomSpell();
         } while (spell_0 == spell_1);
 
-        ui_SpellSelector.gameObject.SetActive(true);
         ui_SpellSelector.RefreshSelector(spell_0, spell_1);
+        ui_SpellSelector.gameObject.SetActive(true);
     }
 
     private Base_MagicSpell GetRandomSpell()

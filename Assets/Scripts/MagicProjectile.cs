@@ -41,7 +41,7 @@ public class MagicProjectile : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         GameObject impactParticle = Instantiate(impactParticlePrefab, transform.position, Quaternion.identity);
-        TryApplyDamage(collision);
+        TryDealDamage(collision);
         Destroy(impactParticle, impactParticleLifetime);
         Destroy(gameObject);			
     }
@@ -52,7 +52,7 @@ public class MagicProjectile : MonoBehaviour
         GetComponent<Rigidbody>().AddForce(transform.forward * projectileSpeed, ForceMode.Acceleration);
     }
 
-    private void TryApplyDamage(Collision collision)
+    private void TryDealDamage(Collision collision)
     {
         if (collision.gameObject.TryGetComponent(out IDamageable idamageable))
         {

@@ -22,11 +22,11 @@ public class Hellfire : MonoBehaviour
     {
         if (other.TryGetComponent(out Enemy enemy))
         {
-            ApplyDamage(other);
+            DealDamage(other);
         }
     }
 
-    private void ApplyDamage(Collider other)
+    private void DealDamage(Collider other)
     {
         other.GetComponent<IDamageable>().TakeDamage(spell_Hellfire.DamagePerSecond * Time.fixedDeltaTime);
     }

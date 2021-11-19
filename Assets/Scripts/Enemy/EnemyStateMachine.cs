@@ -11,6 +11,8 @@ public class EnemyStateMachine : MonoBehaviour
     #region Fields
 
     private EnemyBaseState currentState;
+
+    public event Action OnTimeToDealDamage;
     public event Action OnAnimationEnded;
 
     private CheckerPlayerInAttackingZone checkerPlayerInAttackingZone;
@@ -62,6 +64,11 @@ public class EnemyStateMachine : MonoBehaviour
         EnemyMoveState = new EnemyMoveState(this, enemyAnimator, checkerPlayerInAttackingZone);
         EnemyAttackState = new EnemyAttackState(this, enemyAnimator, enemyStats, player);
         EnemyReloadState = new EnemyReloadState(this, enemyAnimator, enemyStats, checkerPlayerInAttackingZone, enemyTransform, player.transform);
+    }
+
+    private void TimeToDealDamage()    // called when it's time to deal damage
+    {
+        OnTimeToDealDamage.Invoke();
     }
 
     private void EndOfAnimation()   // called when attack animation ended

@@ -26,6 +26,7 @@ public class EnemyAttackState : EnemyBaseState
     public override void EnterState()
     {
         enemyStateMachine.OnAnimationEnded += Reload;
+        enemyStateMachine.OnTimeToDealDamage += DealDamage;
         PlayAttackAnimation();
     }
 
@@ -38,16 +39,16 @@ public class EnemyAttackState : EnemyBaseState
         enemyAnimator.Play("Attack");
     }
 
-    private void Reload()   // call when attack animation ended
-    {
-        ApplyDamage();
-        enemyStateMachine.TransitionToState(enemyStateMachine.EnemyReloadState);
-        enemyStateMachine.OnAnimationEnded -= Reload;
-    }
-
-    private void ApplyDamage()
+    private void DealDamage()
     {
         player.TakeDamage(enemyStats.Damage);
+        enemyStateMachine.OnTimeToDealDamage -= DealDamage;
+    }
+
+    private void Reload()   // call when attack animation ended
+    {
+        enemyStateMachine.TransitionToState(enemyStateMachine.EnemyReloadState);
+        enemyStateMachine.OnAnimationEnded -= Reload;
     }
 
     #endregion

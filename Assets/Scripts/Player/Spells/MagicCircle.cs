@@ -19,11 +19,11 @@ public class MagicCircle : MonoBehaviour
     {
         if (other.TryGetComponent(out Enemy enemy))
         {
-            ApplyDamage(other);
+            DealDamage(other);
         }
     }
 
-    private void ApplyDamage(Collider other)
+    private void DealDamage(Collider other)
     {
          other.GetComponent<IDamageable>().TakeDamage(spell_MagicCircle.DamagePerSecond * Time.fixedDeltaTime);
     }

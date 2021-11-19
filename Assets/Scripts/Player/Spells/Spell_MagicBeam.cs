@@ -59,7 +59,7 @@ public class Spell_MagicBeam : Base_MagicSpell
         Vector3 endpoint = GetEndpoint(ref endpointIsEnemy);
         ShootBeamInDirection(endpoint);
         if (endpointIsEnemy == true)
-            ApplyDamage();
+            DealDamage();
     }
 
     void ShootBeamInDirection(Vector3 endpoint)
@@ -89,7 +89,7 @@ public class Spell_MagicBeam : Base_MagicSpell
         return end;
     }
 
-    private void ApplyDamage()
+    private void DealDamage()
     {
         target.GetComponent<IDamageable>().TakeDamage(DamagePerSecond * Time.fixedDeltaTime);
     }
