@@ -21,16 +21,25 @@ public class UI_PlayerLevel : MonoBehaviour
     private void Awake()
     {
         textMeshProUGUI = GetComponent<TextMeshProUGUI>();
-        playerStats = FindObjectOfType<PlayerStats>();
-        playerExperienceSystem = FindObjectOfType<PlayerExperienceSystem>();
     }
 
-    private void Update()
+    private void OnEnable()
     {
-        RefreshText();
+        playerExperienceSystem = FindObjectOfType<PlayerExperienceSystem>();
+        playerExperienceSystem.OnXpGot += RefreshText;
     }
 
-    private void RefreshText()
+    private void OnDisable()
+    {
+        playerExperienceSystem.OnXpGot -= RefreshText;
+    }
+
+    private void Start()
+    {
+        playerStats = FindObjectOfType<PlayerStats>();
+    }
+
+    private void RefreshText()  // call when event invoke
     {
         textMeshProUGUI.text = $"{prefixLevel} {playerStats.Level}\n" +
             $"{prefixXP} {playerExperienceSystem.CurrentXP}/{playerExperienceSystem.XPLimit}";

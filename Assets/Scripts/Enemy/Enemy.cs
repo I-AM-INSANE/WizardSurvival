@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
-using UnityEngine.AI;
+
+[RequireComponent(typeof(EnemyStats))]
 
 public class Enemy : MonoBehaviour, IDamageable
 {
@@ -12,9 +13,13 @@ public class Enemy : MonoBehaviour, IDamageable
 
     #region Methods
 
-    private void Start()
+    private void Awake()
     {
         enemyStats = GetComponent<EnemyStats>();
+    }
+
+    private void Start()
+    {
         playerExperienceSystem = FindObjectOfType<PlayerExperienceSystem>();
     }
 

@@ -1,6 +1,10 @@
 ﻿using System;
 using UnityEngine;
-using UnityEngine.AI;
+
+[RequireComponent(typeof(CheckerPlayerInAttackingZone))]
+[RequireComponent(typeof(Animator))]
+[RequireComponent(typeof(EnemyStats))]
+[RequireComponent(typeof(Transform))]
 
 public class EnemyStateMachine : MonoBehaviour
 {
@@ -33,11 +37,11 @@ public class EnemyStateMachine : MonoBehaviour
         enemyAnimator = GetComponent<Animator>();
         enemyStats = GetComponent<EnemyStats>();
         enemyTransform = GetComponent<Transform>();
-        player = FindObjectOfType<Player>();
     }
 
     private void Start()
     {
+        player = FindObjectOfType<Player>();
         InstantiateStates();
         TransitionToState(EnemyMoveState);
     }

@@ -21,7 +21,7 @@ public class TargetFinder : MonoBehaviour
 
     #region Methods
 
-    private void Start()
+    private void Awake()
     {
         playerStats = GetComponent<PlayerStats>();
     }
@@ -44,13 +44,13 @@ public class TargetFinder : MonoBehaviour
         enemies = FindObjectsOfType<Enemy>();
         float minDistance = float.MaxValue;
         float tempDistance;
-        foreach (Enemy enemy in enemies)
+        for (int i = 0; i < enemies.Length; i++)
         {
-            tempDistance = Vector3.Distance(transform.position, enemy.transform.position);
+            tempDistance = Vector3.Distance(transform.position, enemies[i].transform.position);
             if (tempDistance < minDistance && tempDistance < playerStats.AttackRange)
             {
                 minDistance = tempDistance;
-                target = enemy.gameObject;
+                target = enemies[i].gameObject;
             }
         }
     }

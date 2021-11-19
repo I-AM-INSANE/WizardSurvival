@@ -16,8 +16,13 @@ public class MouseLook : MonoBehaviour
     private void Awake()
     {
         Cursor.lockState = CursorLockMode.Locked;
+    }
+
+    private void Start()
+    {
         player = FindObjectOfType<Player>().transform;
     }
+
     private void LateUpdate()
     {
         float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.fixedDeltaTime;

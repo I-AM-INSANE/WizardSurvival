@@ -6226,8 +6226,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 293619875069273563, guid: eadebbeb5133c5b47ac80acf75ce39b0,
         type: 3}
+      propertyPath: projectilePrefab
+      value: 
+      objectReference: {fileID: 100000, guid: a9c95969dd4d043448c3c7aa396c1eaa, type: 3}
+    - target: {fileID: 293619875069273563, guid: eadebbeb5133c5b47ac80acf75ce39b0,
+        type: 3}
       propertyPath: extraDamagePerLevel
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 293619875069273566, guid: eadebbeb5133c5b47ac80acf75ce39b0,
+        type: 3}
+      propertyPath: health
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 293619875069273566, guid: eadebbeb5133c5b47ac80acf75ce39b0,
         type: 3}

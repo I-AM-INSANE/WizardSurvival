@@ -5,7 +5,7 @@ public class PlayerAttack : MonoBehaviour
 {
     #region Fields
 
-    [SerializeField] private GameObject projectileForSpawn;
+    [SerializeField] private GameObject projectilePrefab;
     [SerializeField] private Transform spawnPosition;
 
     private PlayerStats playerStats;
@@ -36,11 +36,9 @@ public class PlayerAttack : MonoBehaviour
 
     private void Attack()
     {
-        GameObject projectile = Instantiate(projectileForSpawn, spawnPosition.position, Quaternion.identity);
+        MagicProjectile projectile = Instantiate(projectilePrefab, spawnPosition.position, Quaternion.identity).GetComponent<MagicProjectile>();
         Vector3 pointToShoot = playerAim.GetPointToShoot();
-        projectile.transform.LookAt(pointToShoot);
-        projectile.GetComponent<Rigidbody>().AddForce(projectile.transform.forward * 
-            projectile.GetComponent<MagicProjectile>().ProjectileSpeed, ForceMode.Acceleration);
+        projectile.Launch(pointToShoot);
 
         StartCoroutine(ReloadRoutine());
     }

@@ -83,9 +83,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c49efb715a1395643b158a8846980bcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  impactParticle: {fileID: 100014, guid: 8b45d738f1421854289beca76ec62ae4, type: 3}
-  projectileParticle: {fileID: 100008, guid: d452c87524dea094eb2d3e18552f06a8, type: 3}
-  muzzleParticle: {fileID: 0}
+  impactParticlePrefab: {fileID: 100014, guid: 8b45d738f1421854289beca76ec62ae4, type: 3}
+  projectileParticlePrefab: {fileID: 100008, guid: d452c87524dea094eb2d3e18552f06a8,
+    type: 3}
+  muzzleParticlePrefab: {fileID: 0}
   damage: 50
   projectileSpeed: 500
   impactParticleLifetime: 2

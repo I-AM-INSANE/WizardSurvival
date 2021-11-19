@@ -15,6 +15,7 @@ public class PlayerExperienceSystem : MonoBehaviour
     private int currentXP = 0;
 
     public event Action OnLevelUp;
+    public event Action OnXpGot;
 
     #endregion
 
@@ -37,6 +38,7 @@ public class PlayerExperienceSystem : MonoBehaviour
     public void AddXP(int xp)
     {
         currentXP += xp;
+        OnXpGot.Invoke();
 
         if (currentXP >= xpLimit)
         { 

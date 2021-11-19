@@ -12,20 +12,21 @@ public class SpellLevelController : MonoBehaviour
 
     #region Methods
 
+    private void Awake()
+    {
+        magicSpells = GetComponents<Base_MagicSpell>();
+    }
+
     private void OnEnable()
     {
+        ui_SpellSelector = FindObjectOfType<UI_SpellSelector>();
+        playerExperienceSystem = FindObjectOfType<PlayerExperienceSystem>();
         playerExperienceSystem.OnLevelUp += RunSpellSelector;
     }
 
     private void OnDisable()
     {
         playerExperienceSystem.OnLevelUp -= RunSpellSelector;
-    }
-    private void Awake()
-    {
-        magicSpells = GetComponents<Base_MagicSpell>();
-        playerExperienceSystem = FindObjectOfType<PlayerExperienceSystem>();
-        ui_SpellSelector = FindObjectOfType<UI_SpellSelector>();
     }
 
     public void IncreaseSpellLevel(Base_MagicSpell spell)

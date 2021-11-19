@@ -1,12 +1,14 @@
 ﻿using UnityEngine;
+
+[RequireComponent(typeof(Rigidbody))]
  
 public class MagicProjectile : MonoBehaviour
 {
     #region Fields
 
-    [SerializeField] private GameObject impactParticle;
-    [SerializeField] private GameObject projectileParticle;
-    [SerializeField] private GameObject muzzleParticle;
+    [SerializeField] private GameObject impactParticlePrefab;
+    [SerializeField] private GameObject projectileParticlePrefab;
+    [SerializeField] private GameObject muzzleParticlePrefab;
     [SerializeField] private int damage;
     [SerializeField] private int projectileSpeed = 500;
     [SerializeField] private float impactParticleLifetime = 2f;
@@ -17,18 +19,16 @@ public class MagicProjectile : MonoBehaviour
 
     #endregion
 
-    #region Properties
-
-    public int ProjectileSpeed => projectileSpeed;
-
-    #endregion
-
     #region Methods
+
+    private void OnEnable()
+    {
+        playerStats = FindObjectOfType<PlayerStats>();
+    }
 
     private void Start()
     {
         startPosition = transform.position;
-        playerStats = FindObjectOfType<PlayerStats>();
         InstantiateProjectileParticle();
     }
 
@@ -40,15 +40,16 @@ public class MagicProjectile : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        impactParticle = Instantiate(impactParticle, transform.position, Quaternion.identity);
+        GameObject impactParticle = Instantiate(impactParticlePrefab, transform.position, Quaternion.identity);
         TryApplyDamage(collision);
         Destroy(impactParticle, impactParticleLifetime);
         Destroy(gameObject);			
     }
 
-    public void AddExtraDamage(int extraDamage)
+    public void Launch(Vector3 pointToShoot)
     {
-        damage += extraDamage;
+        transform.LookAt(pointToShoot);
+        GetComponent<Rigidbody>().AddForce(transform.forward * projectileSpeed, ForceMode.Acceleration);
     }
 
     private void TryApplyDamage(Collision collision)
@@ -61,11 +62,11 @@ public class MagicProjectile : MonoBehaviour
 
     private void InstantiateProjectileParticle()
     {
-        projectileParticle = Instantiate(projectileParticle, transform.position, transform.rotation);
+        GameObject projectileParticle = Instantiate(projectileParticlePrefab, transform.position, transform.rotation);
         projectileParticle.transform.parent = transform;
-        if (muzzleParticle != null)
+        if (muzzleParticlePrefab != null)
         {
-            muzzleParticle = Instantiate(muzzleParticle, transform.position, transform.rotation);
+            GameObject muzzleParticle = Instantiate(muzzleParticlePrefab, transform.position, transform.rotation);
             Destroy(muzzleParticle, muzzleParticleLifetime);
         }
     }
