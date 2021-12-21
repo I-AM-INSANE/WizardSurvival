@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
@@ -6,7 +7,7 @@ public class EnemySpawner : MonoBehaviour
     #region Fields
 
     [SerializeField] private float cooldownBetweenSpawn;
-    [SerializeField] private GameObject[] enemies;
+    [SerializeField] private EnemyForSpawn[] enemiesForSpawn;
 
     private GameObject[] spawnPoints;
     private bool cooldown = false;
@@ -24,14 +25,40 @@ public class EnemySpawner : MonoBehaviour
     {
         if (!cooldown)
         {
-            SpawnEnemy(Random.Range(0, enemies.Length), Random.Range(0, spawnPoints.Length));
+            SpawnEnemy(GetRandomEnemyAvailableForSpawn(), GetRandomSpawnPoint());
             StartCoroutine(CooldownBetweenSpawnRoutine());
         }
     }
 
-    private void SpawnEnemy(int enemyNum, int pointNum)
+    private GameObject GetRandomEnemyAvailableForSpawn()
     {
-        Instantiate(enemies[enemyNum], spawnPoints[pointNum].transform.position, Quaternion.identity);
+        List<GameObject> enemies = new List<GameObject>();
+
+        foreach (EnemyForSpawn enemyForSpawn in enemiesForSpawn)
+        {
+            if (enemyForSpawn.AvailableForSpawn == true)
+            {
+                enemies.Add(enemyForSpawn.Enemy);
+            }
+        }
+
+        if (enemies.Count <= 0)
+            Debug.LogError("No enemies for spawn");
+
+        return enemies[Random.Range(0, enemies.Count)];
+    }
+
+    private GameObject GetRandomSpawnPoint()
+    {
+        if (spawnPoints.Length <= 0)
+            Debug.LogError("No spawn points");
+
+        return spawnPoints[Random.Range(0, spawnPoints.Length)];
+    }
+
+    private void SpawnEnemy(GameObject enemy, GameObject spawnPoint)
+    {
+        Instantiate(enemy, spawnPoint.transform.position, Quaternion.identity);
     }
 
     private IEnumerator CooldownBetweenSpawnRoutine()

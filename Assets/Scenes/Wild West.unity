@@ -17928,8 +17928,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cooldownBetweenSpawn: 2
-  enemies:
-  - {fileID: 342261866935696059, guid: 717bceea621098046a9fe77c50362d8f, type: 3}
+  enemiesForSpawn:
+  - enemy: {fileID: 342261866935696059, guid: 717bceea621098046a9fe77c50362d8f, type: 3}
+    spawnTimeInMinutes: 0
 --- !u!4 &2051616298
 Transform:
   m_ObjectHideFlags: 0
